@@ -58,16 +58,48 @@
 		E2DC9B4527A4674D00A4445E /* Sports */ = {
 			isa = PBXGroup;
 			children = (
+				E2DC9B5F27A46EC700A4445E /* View */,
+				E2DC9B5E27A46EBA00A4445E /* Presenter */,
+				E2DC9B5D27A46EA700A4445E /* Model */,
 				E2DC9B4627A4674D00A4445E /* AppDelegate.swift */,
 				E2DC9B4827A4674D00A4445E /* SceneDelegate.swift */,
-				E2DC9B4A27A4674D00A4445E /* ViewController.swift */,
-				E2DC9B4C27A4674D00A4445E /* Main.storyboard */,
 				E2DC9B5227A4674E00A4445E /* Assets.xcassets */,
-				E2DC9B5427A4674E00A4445E /* LaunchScreen.storyboard */,
 				E2DC9B5727A4674E00A4445E /* Info.plist */,
 				E2DC9B4F27A4674D00A4445E /* Sports.xcdatamodeld */,
 			);
 			path = Sports;
+			sourceTree = "<group>";
+		};
+		E2DC9B5D27A46EA700A4445E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2DC9B6027A46EF900A4445E /* Services */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2DC9B5E27A46EBA00A4445E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E2DC9B5F27A46EC700A4445E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2DC9B4C27A4674D00A4445E /* Main.storyboard */,
+				E2DC9B5427A4674E00A4445E /* LaunchScreen.storyboard */,
+				E2DC9B4A27A4674D00A4445E /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2DC9B6027A46EF900A4445E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
