@@ -38,15 +38,15 @@ class MyLeagesViewController: UITableViewController {
         self.present(leagueDetailsVC, animated: true, completion: nil)
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = "cell"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
