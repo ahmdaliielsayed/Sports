@@ -1,26 +1,35 @@
 PODS:
   - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
+  - ObjectMapper (3.5.3)
   - SKActivityIndicatorView (1.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - AlamofireObjectMapper
   - Kingfisher (~> 5.0)
   - SKActivityIndicatorView (~> 1.0.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireObjectMapper
     - Kingfisher
+    - ObjectMapper
     - SKActivityIndicatorView
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   SKActivityIndicatorView: 81c123380127ad497f9b57cd4d11347e40ab3427
 
-PODFILE CHECKSUM: c8d6bdadc788d8d0d0c6cca55da61c8cf4939467
+PODFILE CHECKSUM: 03bf86f78c70e20a30f950a43d305eb15b56a470
 
 COCOAPODS: 1.11.2
