@@ -257,7 +257,7 @@
 		9899D6B78FFC9902F1EE70C859DED39C /* AlamofireObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlamofireObjectMapper-umbrella.h"; sourceTree = "<group>"; };
 		9BCE62D8EC2D3DDAB103FBA2C0549D24 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = Sources/URLTransform.swift; sourceTree = "<group>"; };
 		9C34D88593B5B8D0D772C9CAE05F3F4B /* AVAssetImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVAssetImageDataProvider.swift; path = Sources/General/ImageSource/AVAssetImageDataProvider.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9A0BC3FA6C261D7588E6CCCD3168CF /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
 		9D9E675405BF087F7B3B124AF3C30821 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		9E88FD317CD924BC36C8FCBA94058221 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 		F18D4B5ABBDA64648464F63659F14AF5 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
 		F28C571E66CFAF06F1607505CE1B8029 /* Pods-Sports-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Sports-Info.plist"; sourceTree = "<group>"; };
 		F3F40BD53EB1201374710BD9285163FC /* SKActivityIndicatorView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SKActivityIndicatorView.modulemap; sourceTree = "<group>"; };
-		F4358E48DAF1777C6AA443BCF15CD38A /* Pods_Sports.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4358E48DAF1777C6AA443BCF15CD38A /* Pods-Sports */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Sports"; path = Pods_Sports.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B82C8B71330E69EE05CB89B3B3EBCE /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
 		F7C176CDC2EF2E328C1525FFF98E4DF0 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		F806EAA7BD07866CBFD616D344E108CA /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = Sources/ISO8601DateTransform.swift; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 				86822384CD379FCE373C2F755839B8DE /* AlamofireObjectMapper */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper */,
-				F4358E48DAF1777C6AA443BCF15CD38A /* Pods_Sports.framework */,
+				F4358E48DAF1777C6AA443BCF15CD38A /* Pods-Sports */,
 				5F32A7C4534653FD9CA683BE0201CEB9 /* SKActivityIndicatorView */,
 			);
 			name = Products;
@@ -482,6 +482,7 @@
 				9BCE62D8EC2D3DDAB103FBA2C0549D24 /* URLTransform.swift */,
 				C42F678F057F3172B601A9DE702E4EBC /* Support Files */,
 			);
+			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -491,6 +492,7 @@
 				5932BD4DB777C03DB9E7CAA850B06B11 /* Core */,
 				F0B27A95616AF1D435B110D6C400D4B8 /* Support Files */,
 			);
+			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -559,6 +561,7 @@
 				86F890FDB3032FCCFB8A3AFAE2DAD3C1 /* SKActivityIndicatorViewStyle.swift */,
 				17D44618F58C8E52620DFBF8786EB811 /* Support Files */,
 			);
+			name = SKActivityIndicatorView;
 			path = SKActivityIndicatorView;
 			sourceTree = "<group>";
 		};
@@ -595,6 +598,7 @@
 				C087A2A77572C07B10AFFC60433AB587 /* AlamofireObjectMapper.swift */,
 				4A70220B46444805AEC09D80C2DDB486 /* Support Files */,
 			);
+			name = AlamofireObjectMapper;
 			path = AlamofireObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -665,6 +669,7 @@
 				D2070B47E7E7933633F47D14DC2D8563 /* Validation.swift */,
 				80ACC2EE401E2DE36F90A3D5764DA9CF /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -796,7 +801,7 @@
 			);
 			name = "Pods-Sports";
 			productName = Pods_Sports;
-			productReference = F4358E48DAF1777C6AA443BCF15CD38A /* Pods_Sports.framework */;
+			productReference = F4358E48DAF1777C6AA443BCF15CD38A /* Pods-Sports */;
 			productType = "com.apple.product-type.framework";
 		};
 		C0780DC3D8993E161579C5EBE279962E /* SKActivityIndicatorView */ = {

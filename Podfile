@@ -6,8 +6,8 @@ target 'Sports' do
   use_frameworks!
 
   # Pods for Sports
-pod 'Alamofire', '~> 4.0'
+  pod 'Alamofire', '~> 4.0'
   pod 'Kingfisher', '~> 5.0'
   pod 'SKActivityIndicatorView', '~> 1.0.0'
-
+  pod 'AlamofireObjectMapper'
 end
