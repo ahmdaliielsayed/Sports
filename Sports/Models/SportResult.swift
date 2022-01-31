@@ -1,5 +1,5 @@
 //
-//  Sports.swift
+//  SportResult.swift
 //  Sports
 //
 //  Created by Ahmed on 1/30/22.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class SportResult: Decodable{
+    var sports: [Sport]
+}
