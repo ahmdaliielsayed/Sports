@@ -1,22 +1,19 @@
 //
-//  LeaguesDetailsVC.swift
+//  FavouriteLeaguesVC.swift
 //  Sports
 //
-//  Created by Mohamed Adel on 1/28/22.
+//  Created by Ahmed on 1/30/22.
 //  Copyright © 2022 Ahmed Ali. All rights reserved.
 //
 
 import UIKit
 
-class LeaguesDetailsVC: UIViewController {
-    
-    var country: Country?
+class FavouriteLeaguesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(country!.strLeague!)
     }
     
 

@@ -1,27 +1,16 @@
 //
-//  MyLeagesViewController.swift
+//  LeaguesVC+TableView.swift
 //  Sports
 //
-//  Created by Ahmed on 1/28/22.
+//  Created by Ahmed on 1/31/22.
 //  Copyright © 2022 Ahmed Ali. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class MyLeagesViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-
-    // MARK: - Table view data source
-
+extension LeagueViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -29,24 +18,26 @@ class MyLeagesViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "LeaguesDetailsAndTeams", bundle: nil)
-        let leagueDetailsVC = storyboard.instantiateViewController(withIdentifier: "LeaguesDetailsVC") as! LeaguesDetailsVC
-        self.present(leagueDetailsVC, animated: true, completion: nil)
+        return presenter.getLeaguesCount()
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueTVCell", for: indexPath) as! LeagueTVCell
 
-        cell.textLabel?.text = "cell"
+        // Configure the cell...
+        presenter.configure(cell: cell, for: indexPath.row)
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //return UIScreen.main.bounds.size.height / 8
+        return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectRow(index: indexPath.row)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -64,7 +55,7 @@ class MyLeagesViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
@@ -92,5 +83,4 @@ class MyLeagesViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
