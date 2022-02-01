@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="upcomingCollectionViewCell" id="gTV-IL-0wX" customClass="upcomingCollectionViewCell" customModule="Sports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfT-uU-Xw1">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xyb-ys-uPe">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu 3 Feb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-8p-egw">
+                                <rect key="frame" x="106" y="78" width="81" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lions-indomptables-cameroun-logo-F231C99DDA-seeklogo.com" translatesAutoresizingMaskIntoConstraints="NO" id="Eu2-22-cbm">
+                                <rect key="frame" x="201" y="45" width="89" height="86"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egypt-national-football-team-wikipedia-egypt-national-team-logo-clock-digital-clock-gauge-transparent-png-2680995" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-Ai-JQJ">
+                                <rect key="frame" x="6" y="45" width="89" height="86"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:00 pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f2-6G-1G4">
+                                <rect key="frame" x="123" y="99" width="51" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOt-kN-vJO">
+                                <rect key="frame" x="27" y="139" width="46" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cameroon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwc-FG-aiN">
+                                <rect key="frame" x="204" y="139" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xVa-Ai-JQJ" secondAttribute="bottom" constant="79" id="3Lu-uA-f1e"/>
+                            <constraint firstItem="SOt-kN-vJO" firstAttribute="leading" secondItem="yfT-uU-Xw1" secondAttribute="leading" constant="27" id="5kG-F3-yBG"/>
+                            <constraint firstAttribute="trailing" secondItem="xVa-Ai-JQJ" secondAttribute="trailing" constant="205" id="HWk-1U-wAu"/>
+                            <constraint firstItem="6fl-8p-egw" firstAttribute="top" secondItem="yfT-uU-Xw1" secondAttribute="top" constant="78" id="MFg-O3-w0z"/>
+                            <constraint firstAttribute="trailing" secondItem="Eu2-22-cbm" secondAttribute="trailing" constant="10" id="OKl-wK-Bcc"/>
+                            <constraint firstItem="6fl-8p-egw" firstAttribute="leading" secondItem="yfT-uU-Xw1" secondAttribute="leading" constant="106" id="Whr-S0-b49"/>
+                            <constraint firstItem="gwc-FG-aiN" firstAttribute="top" secondItem="Eu2-22-cbm" secondAttribute="bottom" constant="8" id="Ykv-eJ-2SL"/>
+                            <constraint firstItem="xVa-Ai-JQJ" firstAttribute="leading" secondItem="yfT-uU-Xw1" secondAttribute="leading" constant="6" id="aO2-xi-fo0"/>
+                            <constraint firstItem="Eu2-22-cbm" firstAttribute="leading" secondItem="yfT-uU-Xw1" secondAttribute="leading" constant="201" id="dMg-rI-Llx"/>
+                            <constraint firstAttribute="bottom" secondItem="Eu2-22-cbm" secondAttribute="bottom" constant="79" id="eUR-zW-chB"/>
+                            <constraint firstItem="gwc-FG-aiN" firstAttribute="leading" secondItem="yfT-uU-Xw1" secondAttribute="leading" constant="204" id="f7G-24-1xk"/>
+                            <constraint firstItem="Eu2-22-cbm" firstAttribute="top" secondItem="yfT-uU-Xw1" secondAttribute="top" constant="45" id="o1e-DQ-r39"/>
+                            <constraint firstItem="SOt-kN-vJO" firstAttribute="top" secondItem="xVa-Ai-JQJ" secondAttribute="bottom" constant="8" id="qzh-ea-pPz"/>
+                            <constraint firstItem="xVa-Ai-JQJ" firstAttribute="top" secondItem="yfT-uU-Xw1" secondAttribute="top" constant="45" id="sT4-Mo-CzQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yfT-uU-Xw1" secondAttribute="bottom" id="2iN-Nq-zhj"/>
+                <constraint firstAttribute="trailing" secondItem="yfT-uU-Xw1" secondAttribute="trailing" id="X7A-dH-VwK"/>
+                <constraint firstItem="yfT-uU-Xw1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gs6-sg-Mxh"/>
+                <constraint firstItem="yfT-uU-Xw1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mMJ-Vh-TQ2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="300" height="210"/>
+            <connections>
+                <outlet property="firstTeamimg" destination="xVa-Ai-JQJ" id="cDZ-4m-pH4"/>
+                <outlet property="secondTeamImg" destination="Eu2-22-cbm" id="hmc-Lc-V1v"/>
+                <outlet property="secondTeamimg" destination="yfT-uU-Xw1" id="V6E-4R-chR"/>
+            </connections>
+            <point key="canvasLocation" x="184" y="100.74962518740631"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="egypt-national-football-team-wikipedia-egypt-national-team-logo-clock-digital-clock-gauge-transparent-png-2680995" width="1000" height="1000"/>
+        <image name="lions-indomptables-cameroun-logo-F231C99DDA-seeklogo.com" width="300" height="300"/>
+    </resources>
+</document>
