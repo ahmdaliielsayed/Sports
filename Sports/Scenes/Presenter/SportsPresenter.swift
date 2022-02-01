@@ -12,6 +12,7 @@ protocol GeneralView {
     func showIndicator()
     func hideIndicator()
     func fetchingDataSuccess()
+    func networkError(errorMessage: String)
     func showError(error: String)
 }
 
@@ -35,7 +36,11 @@ class SportsPresenter {
     }
     
     func viewDidLoad() {
-        getSports()
+        if NetworkConnectivity.isConnectedToInternet {
+            getSports()
+        } else {
+            view?.networkError(errorMessage: "No Internet Connection!\nPlease, open your wifi or Data!")
+        }
     }
     
     func getSports() {
@@ -66,7 +71,6 @@ class SportsPresenter {
     
     func didSelectRow(index: Int) {
         let sport = sports[index]
-        print("Hi \(sport) & \(index)")
         view?.navigateToLeaguesScreen(sport: sport)
     }
 }

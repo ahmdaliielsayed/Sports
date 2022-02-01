@@ -18,6 +18,7 @@ enum HTTPMethod: String {
 
 enum Task {
     case requestPlain
+    case requestParameters(parameters: [String: Any])
     case requestParameters(parameters: [String: Any], encododing: ParameterEncoding)
 }
 

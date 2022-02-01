@@ -35,4 +35,8 @@ extension SportsVC: SportsView {
 
         navigationController?.pushViewController(leaguesVC, animated: true)
     }
+    
+    func networkError(errorMessage: String) {
+        Toast.showToast(controller: self, message: errorMessage, seconds: 5.0)
+    }
 }

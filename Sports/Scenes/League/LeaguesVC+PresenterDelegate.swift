@@ -37,4 +37,16 @@ extension LeagueViewController: LeaguesView {
         
         self.present(leagueDetailsVC, animated: true, completion: nil)
     }
+    
+    func openYoutube(youtubeLink: String) {
+        var youtubeURL = URL(string:"youtube://\(youtubeLink)")!
+        if !UIApplication.shared.canOpenURL(youtubeURL) {
+            youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(youtubeLink)")!
+        }
+        UIApplication.shared.open(youtubeURL)
+    }
+    
+    func networkError(errorMessage: String) {
+        Toast.showToast(controller: self, message: errorMessage, seconds: 5.0)
+    }
 }

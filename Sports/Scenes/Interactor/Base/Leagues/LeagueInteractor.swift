@@ -23,8 +23,8 @@ extension LeagueInteractor: TargetType {
    
    var path: String {
        switch self {
-       case .getLeagues(let sportName):
-           return APIConstants.GET_ALL_LEAGUES + sportName
+       case .getLeagues:
+           return APIConstants.GET_ALL_LEAGUES
     }
    }
    
@@ -38,8 +38,7 @@ extension LeagueInteractor: TargetType {
    var task: Task {
        switch self {
        case .getLeagues(let sportName):
-           return .requestPlain
-           //return .requestParameters(parameters: ["s": sportName], encododing: JSONEncoding.default)
+           return .requestParameters(parameters: ["s": sportName], encododing: URLEncoding.default)
        }
    }
    
