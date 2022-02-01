@@ -17,6 +17,16 @@ extension SportsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         //sportsCV.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
     }
     
+    func setupNavigationController() {
+        navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
+    func setupTabBarController() {
+        tabBarController?.tabBar.barTintColor = UIColor.darkGray
+        tabBarController?.tabBar.tintColor = UIColor.white
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.getSportsCount()
     }

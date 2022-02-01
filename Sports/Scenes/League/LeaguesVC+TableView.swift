@@ -11,6 +11,12 @@ import UIKit
 
 extension LeagueViewController {
     
+    func setupNavigationController() {
+        navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1

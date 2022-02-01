@@ -11,11 +11,83 @@
         <!--Favourite Leagues-->
         <scene sceneID="nkY-su-lfW">
             <objects>
-                <viewController id="Eay-UK-lQI" customClass="FavouriteLeaguesVC" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavouriteLeaguesVC" id="Eay-UK-lQI" customClass="FavouriteLeaguesVC" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="awV-XI-oP9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-rQ-Ifw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteLeagueTVCell" rowHeight="100" id="hxa-yW-nP1" customClass="FavouriteLeagueTVCell" customModule="Sports" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hxa-yW-nP1" id="Zua-9f-d8V">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-ft-lUl">
+                                                    <rect key="frame" x="20" y="11" width="374" height="78"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown" translatesAutoresizingMaskIntoConstraints="NO" id="w1W-jp-4J8">
+                                                            <rect key="frame" x="8" y="8" width="60" height="62"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="F0n-PF-pLj"/>
+                                                                <constraint firstAttribute="width" constant="60" id="zFx-4L-qSR"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="815-lk-aa5">
+                                                            <rect key="frame" x="322" y="23" width="32" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="RF4-6e-FlR"/>
+                                                                <constraint firstAttribute="width" constant="32" id="c4G-3I-vTx"/>
+                                                            </constraints>
+                                                            <state key="normal" image="youtube"/>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qij-wK-PhY">
+                                                            <rect key="frame" x="76" y="8" width="238" height="62"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="815-lk-aa5" firstAttribute="centerY" secondItem="qdS-ft-lUl" secondAttribute="centerY" id="1xa-IN-1iF"/>
+                                                        <constraint firstAttribute="trailing" secondItem="815-lk-aa5" secondAttribute="trailing" constant="20" id="2mG-Io-d8a"/>
+                                                        <constraint firstItem="w1W-jp-4J8" firstAttribute="top" secondItem="qdS-ft-lUl" secondAttribute="topMargin" id="4Nk-MN-3bh"/>
+                                                        <constraint firstItem="w1W-jp-4J8" firstAttribute="centerY" secondItem="qdS-ft-lUl" secondAttribute="centerY" id="4hZ-6z-J4V"/>
+                                                        <constraint firstItem="qij-wK-PhY" firstAttribute="bottom" secondItem="w1W-jp-4J8" secondAttribute="bottom" id="NMs-26-jic"/>
+                                                        <constraint firstItem="qij-wK-PhY" firstAttribute="top" secondItem="w1W-jp-4J8" secondAttribute="top" id="OjV-bU-Gh9"/>
+                                                        <constraint firstItem="815-lk-aa5" firstAttribute="leading" secondItem="qij-wK-PhY" secondAttribute="trailing" constant="8" id="PuT-bK-OMl"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="w1W-jp-4J8" secondAttribute="bottom" id="Z2c-5E-erc"/>
+                                                        <constraint firstAttribute="bottom" secondItem="815-lk-aa5" secondAttribute="bottom" constant="23" id="hFS-eH-daQ"/>
+                                                        <constraint firstItem="w1W-jp-4J8" firstAttribute="leading" secondItem="qdS-ft-lUl" secondAttribute="leadingMargin" id="nE7-iu-stR"/>
+                                                        <constraint firstItem="qij-wK-PhY" firstAttribute="leading" secondItem="w1W-jp-4J8" secondAttribute="trailing" constant="8" id="qkw-kY-3hh"/>
+                                                        <constraint firstItem="815-lk-aa5" firstAttribute="top" secondItem="qdS-ft-lUl" secondAttribute="top" constant="23" id="yRj-cu-04f"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qdS-ft-lUl" secondAttribute="bottom" id="dhY-Lw-YWh"/>
+                                                <constraint firstItem="qdS-ft-lUl" firstAttribute="top" secondItem="Zua-9f-d8V" secondAttribute="topMargin" id="mnU-rk-ZLI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qdS-ft-lUl" secondAttribute="trailing" id="xhN-EL-lvT"/>
+                                                <constraint firstItem="qdS-ft-lUl" firstAttribute="leading" secondItem="Zua-9f-d8V" secondAttribute="leadingMargin" id="yGO-j2-UjF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KL7-rQ-Ifw" firstAttribute="top" secondItem="ete-q6-YwX" secondAttribute="top" id="0K3-bH-tDQ"/>
+                            <constraint firstItem="KL7-rQ-Ifw" firstAttribute="leading" secondItem="awV-XI-oP9" secondAttribute="leading" id="8bU-aR-4o2"/>
+                            <constraint firstAttribute="trailing" secondItem="KL7-rQ-Ifw" secondAttribute="trailing" id="PNE-hl-qaI"/>
+                            <constraint firstItem="KL7-rQ-Ifw" firstAttribute="bottom" secondItem="ete-q6-YwX" secondAttribute="bottom" id="k6i-H9-sao"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ete-q6-YwX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite Leagues" id="ypL-yx-leH"/>

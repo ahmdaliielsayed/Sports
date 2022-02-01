@@ -41,7 +41,7 @@ extension LeagueViewController: LeaguesView {
     func openYoutube(youtubeLink: String) {
         var youtubeURL = URL(string:"youtube://\(youtubeLink)")!
         if !UIApplication.shared.canOpenURL(youtubeURL) {
-            youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(youtubeLink)")!
+            youtubeURL = URL(string: "https://\(youtubeLink)")!
         }
         UIApplication.shared.open(youtubeURL)
     }
