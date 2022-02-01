@@ -20,6 +20,9 @@ class SportsVC: UIViewController {
 
         // Do any additional setup after loading the view.
         setupCollectionView()
+        setupNavigationController()
+        setupTabBarController()
+        
         presenter = SportsPresenter(view: self)
         presenter.viewDidLoad()
     }
