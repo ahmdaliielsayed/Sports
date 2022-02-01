@@ -22,10 +22,10 @@ extension LeagueViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LeagueTVCell", for: indexPath) as! LeagueTVCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: "LeagueTVCell", for: indexPath) as! LeagueTVCell
 
         // Configure the cell...
-        presenter.configure(cell: cell, for: indexPath.row)
+        presenter.configure(cell: &cell, for: indexPath.row)
 
         return cell
     }

@@ -9,11 +9,12 @@
 import Foundation
 
 protocol LeaguesView: class, GeneralView {
-    //var sport: Sport { get set }
     func navigateToLeagueDetailsScreen(country: Country)
+    func openYoutube(youtubeLink: String)
 }
 
 protocol LeagueCellView {
+    var youtubePressed: (() -> ())? { get set }
     func displayLeagueImage(leagueImageURL: String)
     func displayLeagueName(leagueName: String)
 }
@@ -29,7 +30,11 @@ class LeaguesPresenter {
     }
     
     func viewDidLoad() {
-        getLeagues()
+        if NetworkConnectivity.isConnectedToInternet {
+            getLeagues()
+        } else {
+            view?.networkError(errorMessage: "No Internet Connection!\nPlease, open your wifi or Data!")
+        }
     }
     
     func getLeagues() {
@@ -51,10 +56,21 @@ class LeaguesPresenter {
         return countrys.count
     }
     
-    func configure(cell: LeagueCellView, for index: Int) {
+    func configure(cell: inout LeagueTVCell, for index: Int) {
         let country = countrys[index]
         cell.displayLeagueImage(leagueImageURL: country.strBadge!)
         cell.displayLeagueName(leagueName: country.strLeague!)
+        cell.youtubePressed = {
+            if NetworkConnectivity.isConnectedToInternet {
+                if self.countrys[index].strYoutube!.isEmpty {
+                    self.view?.networkError(errorMessage: "Link is Empty!")
+                } else {
+                    self.view?.openYoutube(youtubeLink: self.countrys[index].strYoutube!)
+                }
+            } else {
+                self.view?.networkError(errorMessage: "No Internet Connection!\nPlease, open your wifi or Data!")
+            }
+        }
     }
     
     func didSelectRow(index: Int) {

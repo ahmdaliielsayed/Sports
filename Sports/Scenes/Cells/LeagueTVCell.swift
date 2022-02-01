@@ -13,6 +13,8 @@ class LeagueTVCell: UITableViewCell {
     @IBOutlet weak var ivBadge: UIImageView!
     @IBOutlet weak var lblLeague: UILabel!
     @IBOutlet weak var containerView: UIView!
+        
+    var youtubePressed: (() -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,11 +28,13 @@ class LeagueTVCell: UITableViewCell {
     }
     
     @IBAction func btnYoutube(_ sender: UIButton) {
-        
+        //print("btn youtube")
+        youtubePressed?()
     }
 }
 
 extension LeagueTVCell: LeagueCellView {
+    
     func displayLeagueImage(leagueImageURL: String) {
         configureCell()
 
