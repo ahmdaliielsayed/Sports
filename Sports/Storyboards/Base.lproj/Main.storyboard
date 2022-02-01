@@ -33,15 +33,15 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown" translatesAutoresizingMaskIntoConstraints="NO" id="w1W-jp-4J8">
                                                             <rect key="frame" x="8" y="8" width="60" height="62"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="60" id="F0n-PF-pLj"/>
                                                                 <constraint firstAttribute="width" constant="60" id="zFx-4L-qSR"/>
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="815-lk-aa5">
                                                             <rect key="frame" x="322" y="23" width="32" height="32"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="RF4-6e-FlR"/>
+                                                                <constraint firstAttribute="height" constant="32" id="V4Q-kM-WIl"/>
                                                                 <constraint firstAttribute="width" constant="32" id="c4G-3I-vTx"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="eiH-hY-E19"/>
                                                             </constraints>
                                                             <state key="normal" image="youtube"/>
                                                         </button>
@@ -61,11 +61,8 @@
                                                         <constraint firstItem="qij-wK-PhY" firstAttribute="bottom" secondItem="w1W-jp-4J8" secondAttribute="bottom" id="NMs-26-jic"/>
                                                         <constraint firstItem="qij-wK-PhY" firstAttribute="top" secondItem="w1W-jp-4J8" secondAttribute="top" id="OjV-bU-Gh9"/>
                                                         <constraint firstItem="815-lk-aa5" firstAttribute="leading" secondItem="qij-wK-PhY" secondAttribute="trailing" constant="8" id="PuT-bK-OMl"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="w1W-jp-4J8" secondAttribute="bottom" id="Z2c-5E-erc"/>
-                                                        <constraint firstAttribute="bottom" secondItem="815-lk-aa5" secondAttribute="bottom" constant="23" id="hFS-eH-daQ"/>
                                                         <constraint firstItem="w1W-jp-4J8" firstAttribute="leading" secondItem="qdS-ft-lUl" secondAttribute="leadingMargin" id="nE7-iu-stR"/>
                                                         <constraint firstItem="qij-wK-PhY" firstAttribute="leading" secondItem="w1W-jp-4J8" secondAttribute="trailing" constant="8" id="qkw-kY-3hh"/>
-                                                        <constraint firstItem="815-lk-aa5" firstAttribute="top" secondItem="qdS-ft-lUl" secondAttribute="top" constant="23" id="yRj-cu-04f"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
