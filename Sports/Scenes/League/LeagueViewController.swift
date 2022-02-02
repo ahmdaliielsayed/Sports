@@ -12,20 +12,16 @@ class LeagueViewController: UITableViewController {
     
     var presenter: LeaguesPresenter!
     let indicator = UIActivityIndicatorView(style: .large)
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var sport: Sport?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         setupNavigationController()
         
-        presenter = LeaguesPresenter(view: self)
+        presenter = LeaguesPresenter(view: self, appDelegate: appDelegate)
         presenter.viewDidLoad()
     }
 }

@@ -7,8 +7,6 @@
 //
 
 import Foundation
-// remove it after testing
-import UIKit
 
 protocol LeaguesView: class, GeneralView {
     func openYoutube(youtubeLink: String)
@@ -23,17 +21,18 @@ protocol LeagueCellView {
     var addToFavourite: (() -> ())? { get set }
     func displayLeagueImage(leagueImageURL: String)
     func displayLeagueName(leagueName: String)
-    func displayFavouriteImage(isFavourite: Bool)
 }
 
 class LeaguesPresenter {
     
     private weak var view: LeagueViewController?
     private let interactor: LeaguesAPIProtocol = LeagueAPI()
+    private var interactorCD: CoreDataManager?
     private var countrys = [Country]()
     
-    init(view: LeagueViewController) {
+    init(view: LeagueViewController, appDelegate: AppDelegate) {
         self.view = view
+        self.interactorCD = CoreDataManager(appDelegate: appDelegate)
     }
     
     func viewDidLoad() {
@@ -79,14 +78,13 @@ class LeaguesPresenter {
             }
         }
         
-        let interactor = CoreDataManager(appDelegate: UIApplication.shared.delegate as! AppDelegate)
-        let isExist = interactor.isLeagueExist(idLeague: countrys[index].idLeague!)
+        let isExist = interactorCD!.isLeagueExist(idLeague: countrys[index].idLeague!)
         cell.displayFavouriteImage(isFavourite: isExist)
         cell.addToFavourite = {
             if isExist {
-                let result = interactor.deleteRow(idLeague: country.idLeague!)
+                self.interactorCD!.deleteRow(idLeague: country.idLeague!)
             } else {
-                let result = interactor.insertRow(country: self.countrys[index])
+                self.interactorCD!.insertRow(country: self.countrys[index])
             }
             self.view?.fetchingDataSuccess()
         }
@@ -94,7 +92,11 @@ class LeaguesPresenter {
     }
     
     func didSelectRow(index: Int) {
-        let country = countrys[index]
-        view?.navigateToLeagueDetailsScreen(country: country)
+        if NetworkConnectivity.isConnectedToInternet {
+            let country = countrys[index]
+            view?.navigateToLeagueDetailsScreen(country: country)
+        } else {
+            self.view?.networkError(errorMessage: "No Internet Connection!\nPlease, open your wifi or Data!")
+        }
     }
 }

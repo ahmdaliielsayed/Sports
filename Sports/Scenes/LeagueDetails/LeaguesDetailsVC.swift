@@ -36,6 +36,10 @@ class LeaguesDetailsVC: UIViewController {
         }
     }
 
+    @IBAction func btnDismiss(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     //300 210
