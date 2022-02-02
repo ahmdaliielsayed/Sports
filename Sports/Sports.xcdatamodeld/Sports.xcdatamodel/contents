@@ -1,4 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CountryModel" representedClassName="CountryModel" syncable="YES" codeGenerationType="class">
+        <attribute name="dateFirstEvent" optional="YES" attributeType="String"/>
+        <attribute name="idAPIfootball" optional="YES" attributeType="String"/>
+        <attribute name="idCup" optional="YES" attributeType="String"/>
+        <attribute name="idLeague" optional="YES" attributeType="String"/>
+        <attribute name="idSoccerXML" optional="YES" attributeType="String"/>
+        <attribute name="intFormedYear" optional="YES" attributeType="String"/>
+        <attribute name="strBadge" optional="YES" attributeType="String"/>
+        <attribute name="strBanner" optional="YES" attributeType="String"/>
+        <attribute name="strComplete" optional="YES" attributeType="String"/>
+        <attribute name="strCountry" optional="YES" attributeType="String"/>
+        <attribute name="strCurrentSeason" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionCN" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionDE" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionEN" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionES" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionFR" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionHU" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionIL" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionIT" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionJP" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionNL" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionNO" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionPL" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionPT" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionRU" optional="YES" attributeType="String"/>
+        <attribute name="strDescriptionSE" optional="YES" attributeType="String"/>
+        <attribute name="strDivision" optional="YES" attributeType="String"/>
+        <attribute name="strFacebook" optional="YES" attributeType="String"/>
+        <attribute name="strFanart1" optional="YES" attributeType="String"/>
+        <attribute name="strFanart2" optional="YES" attributeType="String"/>
+        <attribute name="strFanart3" optional="YES" attributeType="String"/>
+        <attribute name="strFanart4" optional="YES" attributeType="String"/>
+        <attribute name="strGender" optional="YES" attributeType="String"/>
+        <attribute name="strInstagram" optional="YES" attributeType="String"/>
+        <attribute name="strLeague" optional="YES" attributeType="String"/>
+        <attribute name="strLeagueAlternate" optional="YES" attributeType="String"/>
+        <attribute name="strLocked" optional="YES" attributeType="String"/>
+        <attribute name="strLogo" optional="YES" attributeType="String"/>
+        <attribute name="strNaming" optional="YES" attributeType="String"/>
+        <attribute name="strPoster" optional="YES" attributeType="String"/>
+        <attribute name="strRSS" optional="YES" attributeType="String"/>
+        <attribute name="strSport" optional="YES" attributeType="String"/>
+        <attribute name="strTrophy" optional="YES" attributeType="String"/>
+        <attribute name="strTvRights" optional="YES" attributeType="String"/>
+        <attribute name="strTwitter" optional="YES" attributeType="String"/>
+        <attribute name="strWebsite" optional="YES" attributeType="String"/>
+        <attribute name="strYoutube" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="CountryModel" positionX="-63" positionY="-18" width="128" height="748"/>
+    </elements>
 </model>

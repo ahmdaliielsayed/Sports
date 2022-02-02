@@ -7,16 +7,23 @@
 //
 
 import Foundation
+// remove it after testing
+import UIKit
 
 protocol LeaguesView: class, GeneralView {
-    func navigateToLeagueDetailsScreen(country: Country)
     func openYoutube(youtubeLink: String)
+}
+
+protocol countrysLeague: LeaguesView {
+    func navigateToLeagueDetailsScreen(country: Country)
 }
 
 protocol LeagueCellView {
     var youtubePressed: (() -> ())? { get set }
+    var addToFavourite: (() -> ())? { get set }
     func displayLeagueImage(leagueImageURL: String)
     func displayLeagueName(leagueName: String)
+    func displayFavouriteImage(isFavourite: Bool)
 }
 
 class LeaguesPresenter {
@@ -71,6 +78,19 @@ class LeaguesPresenter {
                 self.view?.networkError(errorMessage: "No Internet Connection!\nPlease, open your wifi or Data!")
             }
         }
+        
+        let interactor = CoreDataManager(appDelegate: UIApplication.shared.delegate as! AppDelegate)
+        let isExist = interactor.isLeagueExist(idLeague: countrys[index].idLeague!)
+        cell.displayFavouriteImage(isFavourite: isExist)
+        cell.addToFavourite = {
+            if isExist {
+                let result = interactor.deleteRow(idLeague: country.idLeague!)
+            } else {
+                let result = interactor.insertRow(country: self.countrys[index])
+            }
+            self.view?.fetchingDataSuccess()
+        }
+        
     }
     
     func didSelectRow(index: Int) {

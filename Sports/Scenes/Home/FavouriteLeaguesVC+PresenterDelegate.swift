@@ -1,39 +1,29 @@
 //
-//  LeaguesVC+PresenterDelegate.swift
+//  FavouriteLeaguesVC+PresenterDelegate.swift
 //  Sports
 //
-//  Created by Ahmed on 1/31/22.
+//  Created by Ahmed on 2/2/22.
 //  Copyright © 2022 Ahmed Ali. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-extension LeagueViewController: countrysLeague {
-    
-    func showIndicator() {
-        indicator.center = self.view.center
-        self.view.addSubview(indicator)
-        indicator.startAnimating()
-    }
-    
-    func hideIndicator() {
-        indicator.stopAnimating()
-    }
+extension FavouriteLeaguesVC: CoreDataLeagues {
     
     func fetchingDataSuccess() {
-        tableView.reloadData()
+        tableViewLeague.reloadData()
     }
     
     func showError(error: String) {
         print(error)
     }
-    
-    func navigateToLeagueDetailsScreen(country: Country) {
+
+    func navigateToLeagueDetailsScreen(country: CountryModel) {
         let storyboard = UIStoryboard(name: "LeaguesDetailsAndTeams", bundle: nil)
         let leagueDetailsVC = storyboard.instantiateViewController(withIdentifier: "LeaguesDetailsVC") as! LeaguesDetailsVC
         
-        leagueDetailsVC.country = country
+        leagueDetailsVC.countryCoreData = country
         
         self.present(leagueDetailsVC, animated: true, completion: nil)
     }
@@ -49,4 +39,5 @@ extension LeagueViewController: countrysLeague {
     func networkError(errorMessage: String) {
         Toast.showToast(controller: self, message: errorMessage, seconds: 5.0)
     }
+    
 }
