@@ -10,10 +10,22 @@ import UIKit
 
 class FavouriteLeaguesVC: UIViewController {
 
+    @IBOutlet weak var tableViewLeague: UITableView!
+    
+    var presenter: LeaguesCDPresenter!
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupTableView()
+        setupNavigationController()
+        setupTabBarController()
+        setupRightBarButtonItem()
+        
+        presenter = LeaguesCDPresenter(view: self, appDelegate: appDelegate)
+        presenter.viewDidLoad()
     }
     
 

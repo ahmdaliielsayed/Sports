@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-rQ-Ifw">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-rQ-Ifw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteLeagueTVCell" rowHeight="100" id="hxa-yW-nP1" customClass="FavouriteLeagueTVCell" customModule="Sports" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -44,6 +44,9 @@
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="eiH-hY-E19"/>
                                                             </constraints>
                                                             <state key="normal" image="youtube"/>
+                                                            <connections>
+                                                                <action selector="btnYoutube:" destination="hxa-yW-nP1" eventType="touchUpInside" id="LYd-Qk-fqn"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qij-wK-PhY">
                                                             <rect key="frame" x="76" y="8" width="238" height="62"/>
@@ -74,6 +77,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="containerView" destination="qdS-ft-lUl" id="d2x-1e-7dm"/>
+                                            <outlet property="ivBadge" destination="w1W-jp-4J8" id="x52-lH-Hbt"/>
+                                            <outlet property="lblLeague" destination="qij-wK-PhY" id="EhG-NZ-bO2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -88,6 +96,9 @@
                         <viewLayoutGuide key="safeArea" id="ete-q6-YwX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite Leagues" id="ypL-yx-leH"/>
+                    <connections>
+                        <outlet property="tableViewLeague" destination="KL7-rQ-Ifw" id="bmU-Nj-p5d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsE-lP-pup" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +172,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QhQ-E5-eed" firstAttribute="bottom" secondItem="BaQ-eB-tbX" secondAttribute="bottom" id="9RY-xi-FPn"/>
                             <constraint firstItem="QhQ-E5-eed" firstAttribute="trailing" secondItem="BaQ-eB-tbX" secondAttribute="trailing" id="MaE-Vy-FaX"/>
@@ -186,7 +197,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RDX-pO-61x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueTVCell" rowHeight="100" id="o0D-tv-dr5" customClass="LeagueTVCell" customModule="Sports" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -222,6 +233,17 @@
                                                         <action selector="btnYoutube:" destination="o0D-tv-dr5" eventType="touchUpInside" id="Vvx-Wx-Ovs"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-cx-mj7">
+                                                    <rect key="frame" x="266" y="23" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="8hq-GJ-fN2"/>
+                                                        <constraint firstAttribute="height" constant="32" id="ebl-2E-jnT"/>
+                                                    </constraints>
+                                                    <state key="normal" image="unfavourite"/>
+                                                    <connections>
+                                                        <action selector="btnFavourite:" destination="o0D-tv-dr5" eventType="touchUpInside" id="eu8-kd-SP9"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
@@ -231,8 +253,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="OCB-wF-unA" secondAttribute="trailing" constant="20" symbolic="YES" id="F0v-Yk-ngv"/>
                                                 <constraint firstItem="a0u-XQ-eoa" firstAttribute="top" secondItem="J57-2x-KBG" secondAttribute="top" id="GgA-1S-F1M"/>
                                                 <constraint firstItem="J57-2x-KBG" firstAttribute="centerY" secondItem="caQ-pq-O9c" secondAttribute="centerY" id="K7V-8b-fUs"/>
+                                                <constraint firstItem="3wB-cx-mj7" firstAttribute="top" secondItem="OCB-wF-unA" secondAttribute="top" id="X6q-HX-jj6"/>
+                                                <constraint firstItem="3wB-cx-mj7" firstAttribute="bottom" secondItem="OCB-wF-unA" secondAttribute="bottom" id="ZDb-y2-gTZ"/>
                                                 <constraint firstItem="OCB-wF-unA" firstAttribute="centerY" secondItem="caQ-pq-O9c" secondAttribute="centerY" id="hRX-ti-eAz"/>
                                                 <constraint firstItem="OCB-wF-unA" firstAttribute="leading" secondItem="a0u-XQ-eoa" secondAttribute="trailing" constant="8" id="zd0-Mu-Qym"/>
+                                                <constraint firstItem="OCB-wF-unA" firstAttribute="leading" secondItem="3wB-cx-mj7" secondAttribute="trailing" constant="24" id="zjD-oZ-lAY"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -245,6 +270,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="btnFavOutlet" destination="3wB-cx-mj7" id="Avs-39-TtJ"/>
                                     <outlet property="containerView" destination="caQ-pq-O9c" id="76F-6R-tHR"/>
                                     <outlet property="ivBadge" destination="J57-2x-KBG" id="oBA-Nd-PK9"/>
                                     <outlet property="lblLeague" destination="a0u-XQ-eoa" id="3vo-8n-0FD"/>
@@ -322,6 +348,7 @@
         <image name="arkit" catalog="system" width="64" height="64"/>
         <image name="sports" width="1200" height="675"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
+        <image name="unfavourite" width="512" height="512"/>
         <image name="unknown" width="3667" height="2292"/>
         <image name="youtube" width="512" height="512"/>
     </resources>

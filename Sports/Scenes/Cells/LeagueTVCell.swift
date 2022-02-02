@@ -13,8 +13,10 @@ class LeagueTVCell: UITableViewCell {
     @IBOutlet weak var ivBadge: UIImageView!
     @IBOutlet weak var lblLeague: UILabel!
     @IBOutlet weak var containerView: UIView!
-        
+    @IBOutlet weak var btnFavOutlet: UIButton!
+    
     var youtubePressed: (() -> ())?
+    var addToFavourite: (() -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,6 +32,10 @@ class LeagueTVCell: UITableViewCell {
     @IBAction func btnYoutube(_ sender: UIButton) {
         //print("btn youtube")
         youtubePressed?()
+    }
+    
+    @IBAction func btnFavourite(_ sender: UIButton) {
+        addToFavourite?()
     }
 }
 
@@ -53,5 +59,13 @@ extension LeagueTVCell: LeagueCellView {
     
     func displayLeagueName(leagueName: String) {
         lblLeague.text = leagueName
+    }
+    
+    func displayFavouriteImage(isFavourite: Bool) {
+        if isFavourite {
+            btnFavOutlet.setImage(UIImage(named: "favourite"), for: .normal)
+        } else {
+            btnFavOutlet.setImage(UIImage(named: "unfavourite"), for: .normal)
+        }
     }
 }

@@ -9,6 +9,13 @@
 import UIKit
 
 class FavouriteLeagueTVCell: UITableViewCell {
+    
+    @IBOutlet weak var ivBadge: UIImageView!
+    @IBOutlet weak var lblLeague: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    
+    var youtubePressed: (() -> ())?
+    var addToFavourite: (() -> ())?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,5 +27,35 @@ class FavouriteLeagueTVCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func btnYoutube(_ sender: UIButton) {
+        youtubePressed?()
+    }
+}
 
+extension FavouriteLeagueTVCell: LeagueCellView {
+    func displayFavouriteImage(isFavourite: Bool) {
+        
+    }
+    
+    
+    func displayLeagueImage(leagueImageURL: String) {
+        configureCell()
+
+        ivBadge.kf.setImage(with: URL(string: leagueImageURL), placeholder: UIImage(named: "sports.jpg"), options: [.transition(.fade(0.7))], progressBlock: nil)
+    }
+    
+    func configureCell() {
+        ivBadge.layer.cornerRadius = ivBadge.frame.size.width / 2
+        ivBadge.clipsToBounds = true
+        ivBadge.layer.masksToBounds = true
+        ivBadge.layer.borderColor = UIColor.black.cgColor
+        ivBadge.layer.borderWidth = 4
+        
+        containerView.layer.cornerRadius = containerView.frame.height / 2
+    }
+    
+    func displayLeagueName(leagueName: String) {
+        lblLeague.text = leagueName
+    }
 }

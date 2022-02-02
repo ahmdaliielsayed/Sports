@@ -1,14 +1,14 @@
 //
-//  Country.swift
+//  CountryItem.swift
 //  Sports
 //
-//  Created by Ahmed on 1/31/22.
+//  Created by Ahmed on 2/2/22.
 //  Copyright © 2022 Ahmed Ali. All rights reserved.
 //
 
 import Foundation
 
-class Country: Decodable {
+/*class CountryItem {
     
     var idLeague: String?
     var idSoccerXML: String?
@@ -107,4 +107,4 @@ class Country: Decodable {
         self.strComplete = strComplete
         self.strLocked = strLocked
     }
-}
+}*/

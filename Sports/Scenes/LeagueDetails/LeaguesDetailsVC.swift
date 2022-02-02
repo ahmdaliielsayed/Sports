@@ -11,6 +11,7 @@ import UIKit
 class LeaguesDetailsVC: UIViewController {
     
     var country: Country?
+    var countryCoreData: CountryModel?
 
     //MARK:-Outlet section
     
@@ -28,7 +29,11 @@ class LeaguesDetailsVC: UIViewController {
         setupCollectionView()
 
         // Do any additional setup after loading the view.
-        print(country!.strLeague!)
+        if country != nil {
+            print(country!.strLeague!)
+        } else {
+            print(countryCoreData!.strLeague!)
+        }
     }
 
 }
