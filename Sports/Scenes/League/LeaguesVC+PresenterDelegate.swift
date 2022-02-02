@@ -28,6 +28,7 @@ extension LeagueViewController: countrysLeague {
     
     func showError(error: String) {
         print(error)
+        Toast.showToast(controller: self, message: error, seconds: 3.0)
     }
     
     func navigateToLeagueDetailsScreen(country: Country) {
@@ -48,6 +49,6 @@ extension LeagueViewController: countrysLeague {
     }
     
     func networkError(errorMessage: String) {
-        Toast.showToast(controller: self, message: errorMessage, seconds: 5.0)
+        Toast.showToast(controller: self, message: errorMessage, seconds: 3.0)
     }
 }

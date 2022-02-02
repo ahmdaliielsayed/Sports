@@ -17,7 +17,6 @@ protocol CoreDataLeagues {
 class LeaguesCDPresenter {
     
     private weak var view: FavouriteLeaguesVC?
-    //private var countrys = [Country]()
     
     private var interactor: CoreDataManager?
     var countrysList: Array<CountryModel> = []

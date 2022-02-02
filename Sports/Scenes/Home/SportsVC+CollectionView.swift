@@ -14,7 +14,6 @@ extension SportsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     func setupCollectionView() {
         sportsCV.dataSource = self
         sportsCV.delegate = self
-        //sportsCV.register(UINib(nibName: "UserCell", bundle: nil), forCellReuseIdentifier: "UserCell")
     }
     
     func setupNavigationController() {

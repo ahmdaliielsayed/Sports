@@ -34,10 +34,6 @@ class FavouriteLeagueTVCell: UITableViewCell {
 }
 
 extension FavouriteLeagueTVCell: LeagueCellView {
-    func displayFavouriteImage(isFavourite: Bool) {
-        
-    }
-    
     
     func displayLeagueImage(leagueImageURL: String) {
         configureCell()

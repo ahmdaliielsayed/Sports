@@ -19,8 +19,7 @@ class CoreDataManager {
         appContext = appDelegate.persistentContainer.viewContext
     }
     
-    func insertRow(country: Country) -> Bool {
-        var done: Bool = false
+    func insertRow(country: Country) {
         
         let entity = NSEntityDescription.entity(forEntityName: "CountryModel", in: appContext)
         let countryRow = NSManagedObject(entity: entity!, insertInto: appContext)
@@ -74,12 +73,9 @@ class CoreDataManager {
         
         do {
             try appContext.save()
-            done = true
         } catch let error {
             print(error.localizedDescription)
         }
-        
-        return done
     }
     
     func selectAllCountrys() -> [CountryModel] {
@@ -94,24 +90,13 @@ class CoreDataManager {
         return countrysList
     }
     
-    func deleteRow(idLeague: String) -> Bool {
-        
-        var done: Bool = false
-        /*appContext.delete(country)
-        
-        do {
-            try appContext.save()
-            done = true
-        } catch let error {
-            print(error.localizedDescription)
-        }*/
-        
+    func deleteRow(idLeague: String) {
+                
         let countrys = selectAllCountrys()
         
         for country in countrys {
             if idLeague == country.idLeague {
                 appContext.delete(country)
-                done = true
                 break;
             }
         }
@@ -121,8 +106,6 @@ class CoreDataManager {
         } catch let error {
             print(error.localizedDescription)
         }
-        
-        return done
     }
     
     func isLeagueExist(idLeague: String) -> Bool {
@@ -140,19 +123,4 @@ class CoreDataManager {
         
         return exist
     }
-    
-    /*func deleteAllCountrys() {
-        
-        let countrys = selectAllCountrys()
-        
-        for country in countrys {
-            appContext.delete(country)
-        }
-        
-        do {
-            try appContext.save()
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }*/
 }

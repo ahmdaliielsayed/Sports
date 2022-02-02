@@ -70,7 +70,11 @@ class SportsPresenter {
     }
     
     func didSelectRow(index: Int) {
-        let sport = sports[index]
-        view?.navigateToLeaguesScreen(sport: sport)
+        if NetworkConnectivity.isConnectedToInternet {
+            let sport = sports[index]
+            view?.navigateToLeaguesScreen(sport: sport)
+        } else {
+            self.view?.networkError(errorMessage: "No Internet Connection!\nPlease, open your wifi or Data!")
+        }
     }
 }
