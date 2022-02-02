@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 extension SportsVC: SportsView {
     
     func showIndicator() {
         indicator.center = self.view.center
+        indicator.color = UIColor.white
         self.view.addSubview(indicator)
         indicator.startAnimating()
     }

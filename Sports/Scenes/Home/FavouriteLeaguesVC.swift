@@ -22,7 +22,6 @@ class FavouriteLeaguesVC: UIViewController {
         setupTableView()
         setupNavigationController()
         setupTabBarController()
-        setupRightBarButtonItem()
         
         presenter = LeaguesCDPresenter(view: self, appDelegate: appDelegate)
         presenter.viewDidLoad()

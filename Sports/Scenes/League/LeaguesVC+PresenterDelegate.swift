@@ -13,6 +13,7 @@ extension LeagueViewController: countrysLeague {
     
     func showIndicator() {
         indicator.center = self.view.center
+        indicator.color = UIColor.white
         self.view.addSubview(indicator)
         indicator.startAnimating()
     }

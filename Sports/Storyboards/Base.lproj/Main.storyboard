@@ -216,12 +216,6 @@
                                                         <constraint firstAttribute="width" constant="60" id="b16-Ts-ALu"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-XQ-eoa">
-                                                    <rect key="frame" x="88" y="9" width="226" height="60"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-wF-unA">
                                                     <rect key="frame" x="322" y="23" width="32" height="32"/>
                                                     <constraints>
@@ -244,19 +238,25 @@
                                                         <action selector="btnFavourite:" destination="o0D-tv-dr5" eventType="touchUpInside" id="eu8-kd-SP9"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-XQ-eoa">
+                                                    <rect key="frame" x="88" y="9" width="170" height="60"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstItem="a0u-XQ-eoa" firstAttribute="leading" secondItem="J57-2x-KBG" secondAttribute="trailing" constant="8" id="1FI-5Z-ztV"/>
                                                 <constraint firstItem="J57-2x-KBG" firstAttribute="leading" secondItem="caQ-pq-O9c" secondAttribute="leading" constant="20" symbolic="YES" id="6su-pa-2dk"/>
-                                                <constraint firstItem="a0u-XQ-eoa" firstAttribute="bottom" secondItem="J57-2x-KBG" secondAttribute="bottom" id="8qp-XC-ncT"/>
+                                                <constraint firstItem="a0u-XQ-eoa" firstAttribute="leading" secondItem="J57-2x-KBG" secondAttribute="trailing" constant="8" id="6yn-jF-t1e"/>
                                                 <constraint firstAttribute="trailing" secondItem="OCB-wF-unA" secondAttribute="trailing" constant="20" symbolic="YES" id="F0v-Yk-ngv"/>
-                                                <constraint firstItem="a0u-XQ-eoa" firstAttribute="top" secondItem="J57-2x-KBG" secondAttribute="top" id="GgA-1S-F1M"/>
                                                 <constraint firstItem="J57-2x-KBG" firstAttribute="centerY" secondItem="caQ-pq-O9c" secondAttribute="centerY" id="K7V-8b-fUs"/>
                                                 <constraint firstItem="3wB-cx-mj7" firstAttribute="top" secondItem="OCB-wF-unA" secondAttribute="top" id="X6q-HX-jj6"/>
                                                 <constraint firstItem="3wB-cx-mj7" firstAttribute="bottom" secondItem="OCB-wF-unA" secondAttribute="bottom" id="ZDb-y2-gTZ"/>
+                                                <constraint firstItem="3wB-cx-mj7" firstAttribute="leading" secondItem="a0u-XQ-eoa" secondAttribute="trailing" constant="8" id="dBo-53-60z"/>
+                                                <constraint firstItem="a0u-XQ-eoa" firstAttribute="top" secondItem="J57-2x-KBG" secondAttribute="top" id="fu3-im-I0V"/>
                                                 <constraint firstItem="OCB-wF-unA" firstAttribute="centerY" secondItem="caQ-pq-O9c" secondAttribute="centerY" id="hRX-ti-eAz"/>
-                                                <constraint firstItem="OCB-wF-unA" firstAttribute="leading" secondItem="a0u-XQ-eoa" secondAttribute="trailing" constant="8" id="zd0-Mu-Qym"/>
+                                                <constraint firstItem="a0u-XQ-eoa" firstAttribute="bottom" secondItem="J57-2x-KBG" secondAttribute="bottom" id="iu9-Hg-gO6"/>
                                                 <constraint firstItem="OCB-wF-unA" firstAttribute="leading" secondItem="3wB-cx-mj7" secondAttribute="trailing" constant="24" id="zjD-oZ-lAY"/>
                                             </constraints>
                                         </view>
