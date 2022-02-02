@@ -26,11 +26,8 @@ extension FavouriteLeaguesVC: UITableViewDelegate, UITableViewDataSource {
         tabBarController?.tabBar.tintColor = UIColor.white
     }
     
-    func setupRightBarButtonItem() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(addTapped))
-    }
-    
-    @objc func addTapped() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         presenter.viewDidLoad()
     }
     
