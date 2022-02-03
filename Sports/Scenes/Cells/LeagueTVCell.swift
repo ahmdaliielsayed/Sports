@@ -51,7 +51,8 @@ extension LeagueTVCell: LeagueCellView {
         ivBadge.layer.cornerRadius = ivBadge.frame.size.width / 2
         ivBadge.clipsToBounds = true
         ivBadge.layer.masksToBounds = true
-        ivBadge.layer.borderColor = UIColor.black.cgColor
+        let circleColor = UIColor(rgb: 0x012c57)
+        ivBadge.layer.borderColor = circleColor.cgColor
         ivBadge.layer.borderWidth = 4
         
         containerView.layer.cornerRadius = containerView.frame.height / 2
