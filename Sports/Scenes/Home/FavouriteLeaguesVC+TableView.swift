@@ -11,12 +11,6 @@ import UIKit
 
 extension FavouriteLeaguesVC: UITableViewDelegate, UITableViewDataSource {
     
-    func setupNavigationController() {
-        let backColor = UIColor(rgb: 0x012c57)
-        navigationController?.navigationBar.barTintColor = backColor
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-    }
     func setupTableView() {
         tableViewLeague.dataSource = self
         tableViewLeague.delegate = self

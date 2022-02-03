@@ -19,7 +19,6 @@ class SportsVC: UIViewController {
         super.viewDidLoad()
 
         setupCollectionView()
-        setupNavigationController()
         setupTabBarController()
         
         presenter = SportsPresenter(view: self)
