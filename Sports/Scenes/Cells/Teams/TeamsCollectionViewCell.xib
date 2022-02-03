@@ -47,6 +47,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="34" height="115"/>
+            <connections>
+                <outlet property="cellSuperView" destination="fG1-0c-GC1" id="UbS-2f-lW5"/>
+            </connections>
             <point key="canvasLocation" x="120.28985507246378" y="173.77232142857142"/>
         </collectionViewCell>
     </objects>

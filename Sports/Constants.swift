@@ -13,6 +13,8 @@ struct APIConstants {
     static let BASE_URL = "https://www.thesportsdb.com/api/v1/json/2"
     static let GET_ALL_SPORTS = "/all_sports.php"
     static let GET_ALL_LEAGUES = "/search_all_leagues.php"
+    static let GET_LEAGUE = "/eventsseason.php?id="
+    
     
     static let SUCCESS_RESPONSE = 200
 }

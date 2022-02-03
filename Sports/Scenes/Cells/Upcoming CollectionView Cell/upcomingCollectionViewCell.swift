@@ -15,6 +15,8 @@ class upcomingCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        secondTeamimg.layer.cornerRadius = 20
+        secondTeamimg.layer.masksToBounds = true
         firstTeamimg.roundImg()
         secondTeamImg.roundImg()
         
