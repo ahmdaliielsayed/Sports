@@ -10,6 +10,7 @@ import UIKit
 
 class lastestCollectionViewCell: UICollectionViewCell {
  
+    @IBOutlet weak var cellSuperView: UIView!
     @IBOutlet weak var firstTeamImg: UIImageView!
     @IBOutlet weak var secondTeamImg: UIImageView!
     public static let reusableCellIdentifierCell = "lastestCollectionViewCell"
@@ -17,6 +18,10 @@ class lastestCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        view.layer.cornerRadius = 5;
+//        view.layer.masksToBounds = true;
+        cellSuperView.layer.cornerRadius = 20
+        cellSuperView.layer.masksToBounds = true
 //        firstTeamImg.roundImg()
 //        secondTeamImg.roundImg()
     }

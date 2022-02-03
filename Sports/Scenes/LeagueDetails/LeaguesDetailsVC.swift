@@ -27,6 +27,7 @@ class LeaguesDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        addingSwipe()
 
         // Do any additional setup after loading the view.
         if country != nil {
@@ -36,9 +37,6 @@ class LeaguesDetailsVC: UIViewController {
         }
     }
 
-    @IBAction func btnDismiss(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
     
 }
 extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
@@ -113,16 +111,21 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
         return CGSize(width:Int(leastCollectionView.frame.width), height: Int(leastCollectionView.frame.height))
         
     }
-//    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-//
-//        let totalCellWidth = CellWidth * CellCount
-//        let totalSpacingWidth = CellSpacing * (CellCount - 1)
-//
-//        let leftInset = (collectionViewWidth - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
-//        let rightInset = leftInset
-//
-//        return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
-//    }
+}
+
+extension LeaguesDetailsVC {
     
+    func addingSwipe()
+    {
+        let swipeRight = UISwipeGestureRecognizer(target: self, action:
+             #selector(swipeFunc(gesture:)))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+    }
+    @objc func swipeFunc(gesture : UISwipeGestureRecognizer)
+    {
+        dismiss(animated: true, completion: nil)
+    }
     
 }

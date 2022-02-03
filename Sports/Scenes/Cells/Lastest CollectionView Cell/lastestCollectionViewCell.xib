@@ -19,56 +19,48 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzM-5n-9mv">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="210"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PSG-emblem" translatesAutoresizingMaskIntoConstraints="NO" id="OTg-b8-aHl">
-                                <rect key="frame" x="220" y="32" width="111" height="84"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barcelona-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uKE-3W-l5b">
-                                <rect key="frame" x="24" y="32" width="111" height="84"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barcelona-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uKE-3W-l5b">
+                                <rect key="frame" x="8" y="46" width="120" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 : 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-wu-MS8">
-                                <rect key="frame" x="141" y="45" width="65" height="42"/>
+                                <rect key="frame" x="141" y="59" width="65" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full-Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oX-ZX-hW4">
-                                <rect key="frame" x="146" y="88" width="53" height="15"/>
+                                <rect key="frame" x="146" y="102" width="53" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcalona" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIt-zf-Ot8">
-                                <rect key="frame" x="49.5" y="135" width="60.5" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barcalona" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIt-zf-Ot8">
+                                <rect key="frame" x="54" y="149" width="60.5" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PSG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02i-Zq-ZXZ">
-                                <rect key="frame" x="263" y="135" width="25" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PSG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02i-Zq-ZXZ">
+                                <rect key="frame" x="267.5" y="149" width="25" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PSG-emblem" translatesAutoresizingMaskIntoConstraints="NO" id="OTg-b8-aHl">
+                                <rect key="frame" x="229" y="46" width="120" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uKE-3W-l5b" firstAttribute="leading" secondItem="FzM-5n-9mv" secondAttribute="leading" constant="24" id="0XS-3j-K4O"/>
-                            <constraint firstItem="uKE-3W-l5b" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="32" id="1QZ-VR-kdz"/>
-                            <constraint firstItem="OTg-b8-aHl" firstAttribute="leading" secondItem="FzM-5n-9mv" secondAttribute="leading" constant="220" id="2MQ-Z5-uCH"/>
-                            <constraint firstItem="9oX-ZX-hW4" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="88" id="5qf-Dk-AiS"/>
-                            <constraint firstItem="02i-Zq-ZXZ" firstAttribute="centerX" secondItem="OTg-b8-aHl" secondAttribute="centerX" id="752-nL-eks"/>
-                            <constraint firstAttribute="trailing" secondItem="OTg-b8-aHl" secondAttribute="trailing" constant="24" id="9aI-TO-Xv3"/>
-                            <constraint firstItem="BIt-zf-Ot8" firstAttribute="centerX" secondItem="uKE-3W-l5b" secondAttribute="centerX" id="BMr-pd-4EE"/>
+                            <constraint firstItem="9oX-ZX-hW4" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="102" id="5qf-Dk-AiS"/>
                             <constraint firstItem="5Jz-wu-MS8" firstAttribute="leading" secondItem="FzM-5n-9mv" secondAttribute="leading" constant="141" id="Eng-xU-F8k"/>
-                            <constraint firstItem="02i-Zq-ZXZ" firstAttribute="top" secondItem="OTg-b8-aHl" secondAttribute="bottom" constant="19" id="I52-BZ-d4l"/>
-                            <constraint firstAttribute="bottom" secondItem="9oX-ZX-hW4" secondAttribute="bottom" constant="107" id="RDi-2I-8gb"/>
-                            <constraint firstAttribute="trailing" secondItem="uKE-3W-l5b" secondAttribute="trailing" constant="220" id="REM-aP-nTM"/>
-                            <constraint firstAttribute="bottom" secondItem="OTg-b8-aHl" secondAttribute="bottom" constant="94" id="WIt-Jl-se9"/>
-                            <constraint firstItem="5Jz-wu-MS8" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="45" id="WZq-qV-8p1"/>
-                            <constraint firstItem="OTg-b8-aHl" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="32" id="jTP-wc-VA3"/>
-                            <constraint firstItem="BIt-zf-Ot8" firstAttribute="top" secondItem="uKE-3W-l5b" secondAttribute="bottom" constant="19" id="uKG-6O-dTd"/>
+                            <constraint firstAttribute="bottom" secondItem="9oX-ZX-hW4" secondAttribute="bottom" constant="93" id="RDi-2I-8gb"/>
+                            <constraint firstItem="5Jz-wu-MS8" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="59" id="WZq-qV-8p1"/>
                             <constraint firstItem="9oX-ZX-hW4" firstAttribute="leading" secondItem="FzM-5n-9mv" secondAttribute="leading" constant="146" id="vMa-2K-dUe"/>
-                            <constraint firstAttribute="bottom" secondItem="uKE-3W-l5b" secondAttribute="bottom" constant="94" id="yiQ-3w-kgT"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -82,6 +74,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="152" height="108"/>
             <connections>
+                <outlet property="cellSuperView" destination="FzM-5n-9mv" id="re8-q0-j56"/>
                 <outlet property="firstTeamImg" destination="uKE-3W-l5b" id="OWg-ey-EFd"/>
                 <outlet property="secondTeamImg" destination="OTg-b8-aHl" id="V3q-Zx-kSr"/>
             </connections>

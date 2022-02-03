@@ -11,9 +11,12 @@ import UIKit
 class TeamsCollectionViewCell: UICollectionViewCell {
 
     
+    @IBOutlet weak var cellSuperView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        cellSuperView.layer.cornerRadius = 20
+        cellSuperView.layer.masksToBounds = true
     }
     
     

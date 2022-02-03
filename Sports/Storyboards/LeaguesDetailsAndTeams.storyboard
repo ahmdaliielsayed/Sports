@@ -23,14 +23,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="950"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdi-xi-McK">
-                                                <rect key="frame" x="26" y="80" width="222" height="33"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="26" y="51" width="235.5" height="33"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5WH-Vi-kC4">
-                                                <rect key="frame" x="26" y="129" width="388" height="231"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <rect key="frame" x="26" y="100" width="388" height="231"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="231" id="xCt-zh-cgO"/>
                                                 </constraints>
@@ -52,14 +52,14 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Least Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxI-jR-yJ8">
-                                                <rect key="frame" x="26" y="405" width="154" height="34"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="26" y="376" width="166.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WnM-WH-nP2">
-                                                <rect key="frame" x="26" y="455" width="361" height="231"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <rect key="frame" x="26" y="433" width="361" height="231"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="231" id="gZB-oA-jLB"/>
                                                 </constraints>
@@ -81,14 +81,14 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3m-ku-3vX">
-                                                <rect key="frame" x="26" y="731" width="79" height="34"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <nil key="textColor"/>
+                                                <rect key="frame" x="26" y="709" width="85" height="34"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s3M-mH-Mdx">
-                                                <rect key="frame" x="26" y="781" width="388" height="135"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="s3M-mH-Mdx">
+                                                <rect key="frame" x="26" y="766" width="388" height="135"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="135" id="vbi-5u-Bof"/>
                                                 </constraints>
@@ -109,6 +109,8 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+
+
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bll-Io-eM1">
                                                 <rect key="frame" x="20" y="20" width="80" height="52"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -119,24 +121,22 @@
                                                     <action selector="btnDismiss:" destination="Svx-Fo-0Hf" eventType="touchUpInside" id="bA5-vq-C7E"/>
                                                 </connections>
                                             </button>
+
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Rdi-xi-McK" firstAttribute="top" secondItem="XOd-vQ-ibx" secondAttribute="top" constant="80" id="0iX-Jd-ArR"/>
-                                            <constraint firstItem="WnM-WH-nP2" firstAttribute="top" secondItem="NxI-jR-yJ8" secondAttribute="bottom" constant="16" id="1ER-hV-fFH"/>
+                                            <constraint firstItem="Rdi-xi-McK" firstAttribute="top" secondItem="XOd-vQ-ibx" secondAttribute="top" constant="51" id="0iX-Jd-ArR"/>
+                                            <constraint firstItem="WnM-WH-nP2" firstAttribute="top" secondItem="NxI-jR-yJ8" secondAttribute="bottom" constant="23" id="1ER-hV-fFH"/>
                                             <constraint firstItem="U3m-ku-3vX" firstAttribute="leading" secondItem="XOd-vQ-ibx" secondAttribute="leading" constant="26" id="46U-bw-LHQ"/>
-                                            <constraint firstItem="Rdi-xi-McK" firstAttribute="top" secondItem="bll-Io-eM1" secondAttribute="bottom" constant="8" symbolic="YES" id="4FL-vn-hwB"/>
                                             <constraint firstItem="5WH-Vi-kC4" firstAttribute="top" secondItem="Rdi-xi-McK" secondAttribute="bottom" constant="16" id="7pu-Fg-1Wu"/>
-                                            <constraint firstItem="bll-Io-eM1" firstAttribute="top" secondItem="XOd-vQ-ibx" secondAttribute="top" constant="20" symbolic="YES" id="ApI-IT-fzu"/>
                                             <constraint firstAttribute="trailing" secondItem="WnM-WH-nP2" secondAttribute="trailing" constant="27" id="D3v-Ad-hK6"/>
                                             <constraint firstAttribute="trailing" secondItem="s3M-mH-Mdx" secondAttribute="trailing" id="HnF-Qx-ceD"/>
-                                            <constraint firstItem="s3M-mH-Mdx" firstAttribute="top" secondItem="U3m-ku-3vX" secondAttribute="bottom" constant="16" id="M5W-Ia-0Bn"/>
+                                            <constraint firstItem="s3M-mH-Mdx" firstAttribute="top" secondItem="U3m-ku-3vX" secondAttribute="bottom" constant="23" id="M5W-Ia-0Bn"/>
                                             <constraint firstItem="s3M-mH-Mdx" firstAttribute="leading" secondItem="XOd-vQ-ibx" secondAttribute="leading" constant="26" id="MAz-wU-3ac"/>
                                             <constraint firstItem="5WH-Vi-kC4" firstAttribute="leading" secondItem="XOd-vQ-ibx" secondAttribute="leading" constant="26" id="R9Y-qk-j9O"/>
                                             <constraint firstItem="NxI-jR-yJ8" firstAttribute="leading" secondItem="XOd-vQ-ibx" secondAttribute="leading" constant="26" id="ZYG-Tk-ns7"/>
                                             <constraint firstAttribute="trailing" secondItem="5WH-Vi-kC4" secondAttribute="trailing" id="asB-O1-MYK"/>
                                             <constraint firstItem="U3m-ku-3vX" firstAttribute="top" secondItem="WnM-WH-nP2" secondAttribute="bottom" constant="45" id="bJ7-jq-uc9"/>
-                                            <constraint firstItem="bll-Io-eM1" firstAttribute="leading" secondItem="XOd-vQ-ibx" secondAttribute="leading" constant="20" symbolic="YES" id="oB2-pl-BKg"/>
                                             <constraint firstItem="WnM-WH-nP2" firstAttribute="leading" secondItem="XOd-vQ-ibx" secondAttribute="leading" constant="26" id="uWa-yn-4UN"/>
                                             <constraint firstAttribute="height" constant="950" id="uaV-6F-HQZ"/>
                                             <constraint firstItem="Rdi-xi-McK" firstAttribute="leading" secondItem="XOd-vQ-ibx" secondAttribute="leading" constant="26" id="vxI-QU-eEr"/>
@@ -156,7 +156,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="jpo-wI-ICz"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="pOx-0F-iYa" secondAttribute="bottom" id="VGo-CX-1r1"/>
                             <constraint firstItem="pOx-0F-iYa" firstAttribute="leading" secondItem="O4a-QZ-7TR" secondAttribute="leading" id="ZF8-M1-4aF"/>
@@ -174,6 +174,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXH-HY-uVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605.79710144927537" y="154.6875"/>
+        </scene>
+        <!--Team DetailVC-->
+        <scene sceneID="zrh-bj-7Vx">
+            <objects>
+                <viewController storyboardIdentifier="TeamDetailVC" id="LZo-Y5-sNg" customClass="TeamDetailVC" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yOr-OH-UVG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="H0h-ag-e7Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="br7-61-Wc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="158"/>
         </scene>
     </scenes>
 </document>
