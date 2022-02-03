@@ -109,6 +109,19 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
+
+
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bll-Io-eM1">
+                                                <rect key="frame" x="20" y="20" width="80" height="52"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="&lt; leagues">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnDismiss:" destination="Svx-Fo-0Hf" eventType="touchUpInside" id="bA5-vq-C7E"/>
+                                                </connections>
+                                            </button>
+
                                         </subviews>
                                         <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>

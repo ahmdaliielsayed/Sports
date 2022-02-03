@@ -18,7 +18,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KL7-rQ-Ifw">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteLeagueTVCell" rowHeight="100" id="hxa-yW-nP1" customClass="FavouriteLeagueTVCell" customModule="Sports" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -76,7 +76,7 @@
                                                 <constraint firstItem="qdS-ft-lUl" firstAttribute="leading" secondItem="Zua-9f-d8V" secondAttribute="leadingMargin" id="yGO-j2-UjF"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="containerView" destination="qdS-ft-lUl" id="d2x-1e-7dm"/>
                                             <outlet property="ivBadge" destination="w1W-jp-4J8" id="x52-lH-Hbt"/>
@@ -86,7 +86,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KL7-rQ-Ifw" firstAttribute="top" secondItem="ete-q6-YwX" secondAttribute="top" id="0K3-bH-tDQ"/>
                             <constraint firstItem="KL7-rQ-Ifw" firstAttribute="leading" secondItem="awV-XI-oP9" secondAttribute="leading" id="8bU-aR-4o2"/>
@@ -114,7 +114,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BaQ-eB-tbX">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Ya2-EG-FN1">
                                     <size key="itemSize" width="200" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -142,7 +142,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.54332566624365475" green="0.54332566624365475" blue="0.54332566624365475" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="tMz-iN-QU0" firstAttribute="top" secondItem="BkB-ir-PUf" secondAttribute="top" id="0V6-qU-GiC"/>
                                                         <constraint firstAttribute="height" constant="50" id="K8k-6r-v8d"/>
@@ -172,7 +172,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QhQ-E5-eed" firstAttribute="bottom" secondItem="BaQ-eB-tbX" secondAttribute="bottom" id="9RY-xi-FPn"/>
                             <constraint firstItem="QhQ-E5-eed" firstAttribute="trailing" secondItem="BaQ-eB-tbX" secondAttribute="trailing" id="MaE-Vy-FaX"/>
@@ -197,7 +197,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RDX-pO-61x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueTVCell" rowHeight="100" id="o0D-tv-dr5" customClass="LeagueTVCell" customModule="Sports" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
@@ -268,7 +268,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="caQ-pq-O9c" secondAttribute="trailing" id="qb7-Al-mH8"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="btnFavOutlet" destination="3wB-cx-mj7" id="Avs-39-TtJ"/>
                                     <outlet property="containerView" destination="caQ-pq-O9c" id="76F-6R-tHR"/>
@@ -311,9 +311,17 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hjg-Wf-nkh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sports" image="arkit" catalog="system" id="Tcl-QX-2Tv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f0h-Kq-wAP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="f0h-Kq-wAP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -330,9 +338,17 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yrM-a1-irC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favourite League" image="star.fill" catalog="system" id="r8Y-YL-iLO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="obn-BD-jxL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="obn-BD-jxL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

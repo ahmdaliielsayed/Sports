@@ -12,7 +12,8 @@ import UIKit
 extension LeagueViewController {
     
     func setupNavigationController() {
-        navigationController?.navigationBar.barTintColor = UIColor.darkGray
+        let backColor = UIColor(rgb: 0x012c57)
+        navigationController?.navigationBar.barTintColor = backColor
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
