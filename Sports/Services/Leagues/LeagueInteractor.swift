@@ -38,7 +38,7 @@ extension LeagueInteractor: TargetType {
    var task: Task {
        switch self {
        case .getLeagues(let sportName):
-           return .requestParameters(parameters: ["s": sportName], encododing: URLEncoding.default)
+        return .requestParameters(parameters: ["c":"England", "s": sportName], encododing: URLEncoding.default)
        }
    }
    

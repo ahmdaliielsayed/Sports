@@ -10,8 +10,7 @@ import UIKit
 
 class LeaguesDetailsVC: UIViewController {
     
-    var country: Country?
-    var countryCoreData: CountryModel?
+    var idLeague: String?
 
     //MARK:-Outlet section
     
@@ -30,14 +29,12 @@ class LeaguesDetailsVC: UIViewController {
         addingSwipe()
 
         // Do any additional setup after loading the view.
-        if country != nil {
-            print(country!.strLeague!)
-        } else {
-            print(countryCoreData!.strLeague!)
-        }
+        print(idLeague!)
     }
 
-    
+    @IBAction func btnBack(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     //300 210

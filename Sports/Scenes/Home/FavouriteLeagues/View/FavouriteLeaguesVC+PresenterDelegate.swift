@@ -24,7 +24,7 @@ extension FavouriteLeaguesVC: CoreDataLeagues {
         let storyboard = UIStoryboard(name: "LeaguesDetailsAndTeams", bundle: nil)
         let leagueDetailsVC = storyboard.instantiateViewController(withIdentifier: "LeaguesDetailsVC") as! LeaguesDetailsVC
         
-        leagueDetailsVC.countryCoreData = country
+        leagueDetailsVC.idLeague = country.idLeague
         
         self.present(leagueDetailsVC, animated: true, completion: nil)
     }
