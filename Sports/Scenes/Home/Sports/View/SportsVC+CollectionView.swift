@@ -22,6 +22,20 @@ extension SportsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         tabBarController?.tabBar.tintColor = UIColor.white
     }
     
+    func setupRefreshControl() {
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
+        refreshControl.attributedTitle = NSAttributedString(string: "Refresh", attributes: attributes)
+         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        refreshControl.tintColor = .white
+        sportsCV.refreshControl = refreshControl
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        presenter.viewDidLoad()
+        sportsCV.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.getSportsCount()
     }

@@ -18,6 +18,20 @@ extension LeagueViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
+    func setupRefreshControl() {
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]
+        rfreshControl.attributedTitle = NSAttributedString(string: "Refresh", attributes: attributes)
+         rfreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        rfreshControl.tintColor = .white
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        presenter.viewDidLoad()
+        tableView.reloadData()
+        rfreshControl.endRefreshing()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
