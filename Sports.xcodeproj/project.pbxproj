@@ -188,12 +188,8 @@
 		E2B6579027A6057500EEF52E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E2AF01C827A71B3800F0FF74 /* FavouriteLeaguesVC.swift */,
-				E26AE1CF27AACBC30065A0E4 /* FavouriteLeaguesVC+PresenterDelegate.swift */,
-				E26AE1D127AACBEF0065A0E4 /* FavouriteLeaguesVC+TableView.swift */,
-				E2AF01C427A71AC500F0FF74 /* SportsVC.swift */,
-				E2AF01CC27A7323C00F0FF74 /* SportsVC+PresenterDelegate.swift */,
-				E2AF01CE27A7330E00F0FF74 /* SportsVC+CollectionView.swift */,
+				E2E134DF27ABF63D004A5CE7 /* View */,
+				E2E134DE27ABF62E004A5CE7 /* Presenter */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -308,20 +304,9 @@
 				E2EF69D827A854A3004E5CC7 /* League */,
 				E2B6579027A6057500EEF52E /* Home */,
 				E2B6578D27A6053800EEF52E /* Cells */,
-				E2DC9B5E27A46EBA00A4445E /* Presenter */,
 				E2DC9B6027A46EF900A4445E /* Interactor */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		E2DC9B5E27A46EBA00A4445E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				E26AE1CD27AAC7900065A0E4 /* LeaguesCDPresenter.swift */,
-				E2EF69DB27A85555004E5CC7 /* LeaguesPresenter.swift */,
-				E2DC9B6127A4706E00A4445E /* SportsPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		E2DC9B5F27A46EC700A4445E /* Core */ = {
@@ -341,12 +326,51 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		E2EF69D827A854A3004E5CC7 /* League */ = {
+		E2E134DE27ABF62E004A5CE7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E26AE1CD27AAC7900065A0E4 /* LeaguesCDPresenter.swift */,
+				E2DC9B6127A4706E00A4445E /* SportsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E2E134DF27ABF63D004A5CE7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E2AF01C827A71B3800F0FF74 /* FavouriteLeaguesVC.swift */,
+				E26AE1CF27AACBC30065A0E4 /* FavouriteLeaguesVC+PresenterDelegate.swift */,
+				E26AE1D127AACBEF0065A0E4 /* FavouriteLeaguesVC+TableView.swift */,
+				E2AF01C427A71AC500F0FF74 /* SportsVC.swift */,
+				E2AF01CC27A7323C00F0FF74 /* SportsVC+PresenterDelegate.swift */,
+				E2AF01CE27A7330E00F0FF74 /* SportsVC+CollectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2E134E027ABF6FD004A5CE7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E2EF69DB27A85555004E5CC7 /* LeaguesPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E2E134E127ABF704004A5CE7 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				E2EF69D927A854DA004E5CC7 /* LeagueViewController.swift */,
 				E2EF69DD27A8580D004E5CC7 /* LeaguesVC+PresenterDelegate.swift */,
 				E2EF69DF27A858DC004E5CC7 /* LeaguesVC+TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E2EF69D827A854A3004E5CC7 /* League */ = {
+			isa = PBXGroup;
+			children = (
+				E2E134E127ABF704004A5CE7 /* View */,
+				E2E134E027ABF6FD004A5CE7 /* Presenter */,
 			);
 			path = League;
 			sourceTree = "<group>";

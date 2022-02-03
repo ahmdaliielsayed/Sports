@@ -16,12 +16,6 @@ extension SportsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         sportsCV.delegate = self
     }
     
-    func setupNavigationController() {
-        let backColor = UIColor(rgb: 0x012c57)
-        navigationController?.navigationBar.barTintColor = backColor
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-    }
-    
     func setupTabBarController() {
         let backColor = UIColor(rgb: 0x012c57)
         tabBarController?.tabBar.barTintColor = backColor

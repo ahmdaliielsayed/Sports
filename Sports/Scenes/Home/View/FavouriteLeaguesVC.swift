@@ -19,7 +19,6 @@ class FavouriteLeaguesVC: UIViewController {
         super.viewDidLoad()
 
         setupTableView()
-        setupNavigationController()
         setupTabBarController()
         
         presenter = LeaguesCDPresenter(view: self, appDelegate: appDelegate)

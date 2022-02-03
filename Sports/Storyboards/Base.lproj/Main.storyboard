@@ -86,7 +86,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KL7-rQ-Ifw" firstAttribute="top" secondItem="ete-q6-YwX" secondAttribute="top" id="0K3-bH-tDQ"/>
                             <constraint firstItem="KL7-rQ-Ifw" firstAttribute="leading" secondItem="awV-XI-oP9" secondAttribute="leading" id="8bU-aR-4o2"/>
@@ -172,7 +172,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QhQ-E5-eed" firstAttribute="bottom" secondItem="BaQ-eB-tbX" secondAttribute="bottom" id="9RY-xi-FPn"/>
                             <constraint firstItem="QhQ-E5-eed" firstAttribute="trailing" secondItem="BaQ-eB-tbX" secondAttribute="trailing" id="MaE-Vy-FaX"/>
@@ -311,9 +311,17 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hjg-Wf-nkh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sports" image="arkit" catalog="system" id="Tcl-QX-2Tv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f0h-Kq-wAP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="f0h-Kq-wAP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -330,9 +338,17 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yrM-a1-irC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favourite League" image="star.fill" catalog="system" id="r8Y-YL-iLO"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="obn-BD-jxL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="obn-BD-jxL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0039215686269999999" green="0.17254901959999999" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
