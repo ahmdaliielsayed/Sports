@@ -19,11 +19,11 @@ struct APIConstants {
     static let SUCCESS_RESPONSE = 200
 }
 
-struct ErrorMessage {
-    static let statusCodeError = "Something went wrong with statusCode!\nPlease, try again later."
-    static let resultValueError = "Something went wrong with resultValue!\nPlease, try again later."
-    static let jsonSerializationError = "Something went wrong with JSONSerialization!\nPlease, try again later."
-    static let jsonDecoderError = "Something went wrong with JSONDecoder!\nPlease, try again later."
+enum ErrorMessage: String {
+    case statusCodeError = "Something went wrong with statusCode!\nPlease, try again later."
+    case resultValueError = "Something went wrong with resultValue!\nPlease, try again later."
+    case jsonSerializationError = "Something went wrong with JSONSerialization!\nPlease, try again later."
+    case jsonDecoderError = "Something went wrong with JSONDecoder!\nPlease, try again later."
 }
 
 struct Toast {
