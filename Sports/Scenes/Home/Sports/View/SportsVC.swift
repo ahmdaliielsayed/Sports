@@ -14,12 +14,14 @@ class SportsVC: UIViewController {
     
     var presenter: SportsPresenter!
     let indicator = UIActivityIndicatorView(style: .large)
+    let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupCollectionView()
         setupTabBarController()
+        setupRefreshControl()
         
         presenter = SportsPresenter(view: self)
         presenter.viewDidLoad()
