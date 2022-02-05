@@ -47,8 +47,8 @@ extension SportsVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let widthSize = (collectionView.frame.size.width - 10) / 2
-        return CGSize(width: widthSize, height: 200)
+        let widthSize = (collectionView.frame.size.width - 48) / 2
+        return CGSize(width: widthSize, height: 180)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
