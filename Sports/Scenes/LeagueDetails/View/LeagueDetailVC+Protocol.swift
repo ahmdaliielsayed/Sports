@@ -31,7 +31,7 @@ extension LeaguesDetailsVC : LeagueDetailsViewProtocol
     }
     
     func getLeagueId()->String{
-        return idLeague ?? ""
+        return (country == nil ? countryModel?.idLeague : country?.idLeague)!
     }
     
 }

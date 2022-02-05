@@ -35,7 +35,7 @@ extension LeagueViewController: countrysLeague {
         let storyboard = UIStoryboard(name: "LeaguesDetailsAndTeams", bundle: nil)
         let leagueDetailsVC = storyboard.instantiateViewController(withIdentifier: "LeaguesDetailsVC") as! LeaguesDetailsVC
         
-        leagueDetailsVC.idLeague = country.idLeague
+        leagueDetailsVC.country = country
         
         self.present(leagueDetailsVC, animated: true, completion: nil)
     }
