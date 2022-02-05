@@ -16,10 +16,10 @@ class LeagueViewController: UITableViewController {
     let rfreshControl = UIRefreshControl()
     
     var sport: Sport?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupNavigationController()        
         setupNavigationController()
         setupRefreshControl()
         

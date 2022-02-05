@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lastestCollectionViewCell" id="gTV-IL-0wX" customClass="lastestCollectionViewCell" customModule="Sports" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzM-5n-9mv">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barcelona-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="uKE-3W-l5b">
+                                <rect key="frame" x="20.5" y="46" width="76" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 : 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-wu-MS8">
+                                <rect key="frame" x="117.5" y="59" width="65" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full-Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="9oX-ZX-hW4">
+                                <rect key="frame" x="123.5" y="100" width="53" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PSG-emblem" translatesAutoresizingMaskIntoConstraints="NO" id="OTg-b8-aHl">
+                                <rect key="frame" x="203.5" y="46" width="76" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barcalona " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BIt-zf-Ot8">
+                                <rect key="frame" x="27" y="134" width="63.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PSG" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="02i-Zq-ZXZ">
+                                <rect key="frame" x="229" y="137" width="25.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OTg-b8-aHl" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="46" id="1dP-f1-3gp"/>
+                            <constraint firstItem="BIt-zf-Ot8" firstAttribute="centerX" secondItem="uKE-3W-l5b" secondAttribute="centerX" constant="0.25" id="6I8-YC-MI1"/>
+                            <constraint firstItem="5Jz-wu-MS8" firstAttribute="centerX" secondItem="FzM-5n-9mv" secondAttribute="centerX" id="CLX-k7-PU7"/>
+                            <constraint firstItem="9oX-ZX-hW4" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="100" id="D5O-ww-bqY"/>
+                            <constraint firstItem="uKE-3W-l5b" firstAttribute="width" secondItem="FzM-5n-9mv" secondAttribute="width" multiplier="0.253521" id="G9a-hO-8WT"/>
+                            <constraint firstItem="OTg-b8-aHl" firstAttribute="leading" secondItem="5Jz-wu-MS8" secondAttribute="trailing" constant="21" id="HuV-5T-bif"/>
+                            <constraint firstItem="BIt-zf-Ot8" firstAttribute="top" secondItem="uKE-3W-l5b" secondAttribute="bottom" constant="8" id="VFV-lv-p5p"/>
+                            <constraint firstItem="02i-Zq-ZXZ" firstAttribute="top" secondItem="OTg-b8-aHl" secondAttribute="bottom" constant="11" id="VKC-Tu-EKw"/>
+                            <constraint firstItem="uKE-3W-l5b" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="46" id="Y3Z-Xb-Ao2"/>
+                            <constraint firstItem="OTg-b8-aHl" firstAttribute="width" secondItem="FzM-5n-9mv" secondAttribute="width" multiplier="0.253521" id="YQz-Bv-0ik"/>
+                            <constraint firstItem="02i-Zq-ZXZ" firstAttribute="centerX" secondItem="OTg-b8-aHl" secondAttribute="centerX" id="df2-rg-dki"/>
+                            <constraint firstItem="9oX-ZX-hW4" firstAttribute="centerX" secondItem="5Jz-wu-MS8" secondAttribute="centerX" id="q5O-MN-NLT"/>
+                            <constraint firstItem="OTg-b8-aHl" firstAttribute="height" secondItem="FzM-5n-9mv" secondAttribute="height" multiplier="0.380952" id="qo6-Av-ToH"/>
+                            <constraint firstItem="5Jz-wu-MS8" firstAttribute="top" secondItem="FzM-5n-9mv" secondAttribute="top" constant="59" id="sKs-Ct-46g"/>
+                            <constraint firstItem="uKE-3W-l5b" firstAttribute="height" secondItem="FzM-5n-9mv" secondAttribute="height" multiplier="0.380952" id="tri-46-B2E"/>
+                            <constraint firstItem="5Jz-wu-MS8" firstAttribute="leading" secondItem="uKE-3W-l5b" secondAttribute="trailing" constant="21" id="u6t-wQ-o4C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FzM-5n-9mv" secondAttribute="bottom" id="5m9-cc-xMo"/>
+                <constraint firstAttribute="trailing" secondItem="FzM-5n-9mv" secondAttribute="trailing" id="6hG-er-EiH"/>
+                <constraint firstItem="FzM-5n-9mv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WaK-Hs-tqB"/>
+                <constraint firstItem="FzM-5n-9mv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="aAa-or-gAu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="152" height="108"/>
+            <connections>
+                <outlet property="TimeLB" destination="9oX-ZX-hW4" id="93W-b1-1RC"/>
+                <outlet property="cellSuperView" destination="FzM-5n-9mv" id="re8-q0-j56"/>
+                <outlet property="firstTeamImg" destination="uKE-3W-l5b" id="OWg-ey-EFd"/>
+                <outlet property="firstTeamLB" destination="BIt-zf-Ot8" id="Qfw-hL-fod"/>
+                <outlet property="scoreLB" destination="5Jz-wu-MS8" id="tb1-nG-qjt"/>
+                <outlet property="secondTeamImg" destination="OTg-b8-aHl" id="V3q-Zx-kSr"/>
+                <outlet property="secondTeamLB" destination="02i-Zq-ZXZ" id="Gki-mJ-hUG"/>
+            </connections>
+            <point key="canvasLocation" x="2.8125" y="83.75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Barcelona-Logo" width="3840" height="2160"/>
+        <image name="PSG-emblem" width="3840" height="2160"/>
+    </resources>
+</document>

@@ -8,11 +8,18 @@
 
 import UIKit
 
-class lastestCollectionViewCell: UICollectionViewCell {
+class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProtocol{
+     
  
     @IBOutlet weak var cellSuperView: UIView!
     @IBOutlet weak var firstTeamImg: UIImageView!
     @IBOutlet weak var secondTeamImg: UIImageView!
+    @IBOutlet weak var firstTeamLB: UILabel!
+    @IBOutlet weak var secondTeamLB: UILabel!
+    @IBOutlet weak var scoreLB: UILabel!
+    @IBOutlet weak var TimeLB: UILabel!
+    
+    
     public static let reusableCellIdentifierCell = "lastestCollectionViewCell"
     
     override func awakeFromNib() {
@@ -29,6 +36,14 @@ class lastestCollectionViewCell: UICollectionViewCell {
     static func nib()->UINib{
         return UINib(nibName: "lastestCollectionViewCell", bundle: nil)
     }
+    func updateTeamsName(fisrtTeam: String, secondTeam: String) {
+        firstTeamLB.text = fisrtTeam
+        secondTeamLB.text = secondTeam
+    }
+       
+   func updateResult(result: String) {
+        scoreLB.text = result
+   }
 
 
 }

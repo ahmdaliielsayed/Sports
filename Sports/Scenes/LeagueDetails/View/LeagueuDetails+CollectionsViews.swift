@@ -1,41 +1,14 @@
 //
-//  LeaguesDetailsVC.swift
+//  LeagueuDetails+CollectionsViews.swift
 //  Sports
 //
-//  Created by Mohamed Adel on 1/28/22.
+//  Created by Mohamed Adel on 2/4/22.
 //  Copyright © 2022 Ahmed Ali. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class LeaguesDetailsVC: UIViewController {
-    
-    var idLeague: String?
-
-    //MARK:-Outlet section
-    
-    @IBOutlet weak var upcomingCollectionView: UICollectionView!
-    
-      
-    @IBOutlet weak var leastCollectionView: UICollectionView!
-    
-    
-    @IBOutlet weak var teamsCollectionView: UICollectionView!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupCollectionView()
-        addingSwipe()
-
-        // Do any additional setup after loading the view.
-        print(idLeague!)
-    }
-
-    @IBAction func btnBack(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-}
 extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     //300 210
     func setupCollectionView(){
@@ -70,30 +43,37 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        if collectionView == upcomingCollectionView{
+            return presenter?.getupComingCount() ?? 0
+        }
+        else if collectionView == leastCollectionView{
+            return presenter?.getlatestCount() ?? 0
+        }
+        else{
+            //team count
+            return 0
+        }
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
+        
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
-        if collectionView == upcomingCollectionView{
+        if(collectionView == upcomingCollectionView)
+        {
             let cell : upcomingCollectionViewCell = upcomingCollectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCollectionViewCell", for: indexPath) as! upcomingCollectionViewCell
-            
+            presenter?.configureUpComingEventCell(cell: cell, index: indexPath.row)
             return cell
         }
-        else if collectionView == teamsCollectionView{
-            let cell : TeamsCollectionViewCell = teamsCollectionView.dequeueReusableCell(withReuseIdentifier: "TeamsCollectionViewCell", for: indexPath) as! TeamsCollectionViewCell
-            
-            return cell
-        }
-        else{
+        else if(collectionView == leastCollectionView)
+        {
             let cell : lastestCollectionViewCell = leastCollectionView.dequeueReusableCell(withReuseIdentifier: "lastestCollectionViewCell", for: indexPath) as! lastestCollectionViewCell
-            cell.frame.size.width = leastCollectionView.frame.width
-            cell.frame.size.height = leastCollectionView.frame.height
-            
+            presenter?.configureLatestEventCell(cell: cell, index: indexPath.row)
             return cell
         }
+        let cell : TeamsCollectionViewCell = teamsCollectionView.dequeueReusableCell(withReuseIdentifier: "TeamsCollectionViewCell", for: indexPath) as! TeamsCollectionViewCell
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -108,21 +88,4 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
         return CGSize(width:Int(leastCollectionView.frame.width), height: Int(leastCollectionView.frame.height))
         
     }
-}
-
-extension LeaguesDetailsVC {
-    
-    func addingSwipe()
-    {
-        let swipeRight = UISwipeGestureRecognizer(target: self, action:
-             #selector(swipeFunc(gesture:)))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
-        
-    }
-    @objc func swipeFunc(gesture : UISwipeGestureRecognizer)
-    {
-        dismiss(animated: true, completion: nil)
-    }
-    
 }
