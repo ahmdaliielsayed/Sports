@@ -13,14 +13,11 @@ class LeagueViewController: UITableViewController {
     var presenter: LeaguesPresenter!
     let indicator = UIActivityIndicatorView(style: .large)
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
     var sport: Sport?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupNavigationController()
-        
+        setupNavigationController()        
         presenter = LeaguesPresenter(view: self, appDelegate: appDelegate)
         presenter.viewDidLoad()
     }
