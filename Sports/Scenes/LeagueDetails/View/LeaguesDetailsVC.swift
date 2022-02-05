@@ -10,7 +10,8 @@ import UIKit
 
 class LeaguesDetailsVC: UIViewController {
     
-    var idLeague: String?
+    var country: Country?
+    var countryModel: CountryModel?
     let indicator = UIActivityIndicatorView(style: .large)
     var presenter : LeagueDetailsPresenter?
     //MARK:-Outlet section
@@ -34,8 +35,11 @@ class LeaguesDetailsVC: UIViewController {
         addingSwipe()
 
         // Do any additional setup after loading the view.
-        
-        print(idLeague!)
+        if country == nil {
+            print(countryModel!.idLeague!)
+        } else {
+            print(country!.idLeague!)
+        }
     }
     
 
