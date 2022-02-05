@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="-552.17391304347825" y="-192.1875"/>
         </scene>
-        <!--League View Controller-->
+        <!--Leagues-->
         <scene sceneID="aVM-SU-r8G">
             <objects>
-                <tableViewController storyboardIdentifier="leaguesVC" id="HL8-Vb-dS8" customClass="LeagueViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="leaguesVC" title="Leagues" id="HL8-Vb-dS8" customClass="LeagueViewController" customModule="Sports" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RDX-pO-61x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
