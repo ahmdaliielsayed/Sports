@@ -46,15 +46,15 @@ class SportsPresenter {
     func getSports() {
         view?.showIndicator()
         
-        interactor.getSports { (result) in
-            self.view?.hideIndicator()
+        interactor.getSports { [weak self] (result) in
+            self?.view?.hideIndicator()
             switch result {
             case .success(let response):
                 guard let sportResult = response else { return }
-                self.sports = sportResult.sports
-                self.view?.fetchingDataSuccess()
+                self?.sports = sportResult.sports
+                self?.view?.fetchingDataSuccess()
             case .failure(let error):
-                self.view?.showError(error: error.localizedDescription)
+                self?.view?.showError(error: error.userInfo.description)
             }
         }
     }
