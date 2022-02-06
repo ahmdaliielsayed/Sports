@@ -31,7 +31,14 @@ extension LeaguesDetailsVC : LeagueDetailsViewProtocol
     }
     
     func getLeagueId()->String{
-        return (country == nil ? countryModel?.idLeague : country?.idLeague)!
+        return country!.idLeague!
     }
     
+    func displayFavouriteImage(isFavourite: Bool) {
+        if isFavourite {
+            btnFavOutlet.setImage(UIImage(named: "favourite"), for: .normal)
+        } else {
+            btnFavOutlet.setImage(UIImage(named: "star"), for: .normal)
+        }
+    }
 }
