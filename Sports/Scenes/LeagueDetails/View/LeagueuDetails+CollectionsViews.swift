@@ -50,8 +50,7 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
             return presenter?.getlatestCount() ?? 0
         }
         else{
-            //team count
-            return 0
+            return presenter?.getTeamsCount() ?? 0
         }
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -73,6 +72,7 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
             return cell
         }
         let cell : TeamsCollectionViewCell = teamsCollectionView.dequeueReusableCell(withReuseIdentifier: "TeamsCollectionViewCell", for: indexPath) as! TeamsCollectionViewCell
+        presenter?.configureTeamsData(cell: cell, index: indexPath.row)
         return cell
     }
     

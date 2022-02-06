@@ -10,6 +10,12 @@ import UIKit
 
 class TeamDetailVC: UIViewController {
 
+//MARK: - Property Sectoin
+    var team : Team?
+    @IBOutlet weak var teamImg: UIImageView!
+    @IBOutlet weak var stadiumImg: UIImageView!    
+    @IBOutlet weak var teamDescription: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
