@@ -45,15 +45,15 @@ class LeaguesPresenter {
     
     func getLeagues() {
         view?.showIndicator()
-        interactor.getLeagues(sportName: (view?.sport!.strSport)!) { (result) in
-            self.view?.hideIndicator()
+        interactor.getLeagues(sportName: (view?.sport!.strSport)!) { [weak self] (result) in
+            self?.view?.hideIndicator()
             switch result {
             case .success(let response):
                 guard let leagueResult = response else { return }
-                self.countrys = leagueResult.countrys
-                self.view?.fetchingDataSuccess()
-            case .failure(let error):
-                self.view?.showError(error: error.localizedDescription)
+                self?.countrys = leagueResult.countrys
+                self?.view?.fetchingDataSuccess()
+            case .failure:
+                self?.view?.showError(error: "No Data Found!")
             }
         }
     }

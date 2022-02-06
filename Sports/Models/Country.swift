@@ -58,6 +58,10 @@ class Country: Decodable {
     var strComplete: String?
     var strLocked: String?
     
+    init() {
+        
+    }
+    
     init(idLeague: String, idSoccerXML: String, idAPIfootball: String, strSport: String, strLeague: String, strLeagueAlternate: String, strDivision: String, idCup: String, strCurrentSeason: String, intFormedYear: String, dateFirstEvent: String, strGender: String, strCountry: String, strWebsite: String, strFacebook: String, strInstagram: String, strTwitter: String, strYoutube: String, strRSS: String, strDescriptionEN: String, strDescriptionDE: String, strDescriptionFR: String, strDescriptionIT: String, strDescriptionCN: String, strDescriptionJP: String, strDescriptionRU: String, strDescriptionES: String, strDescriptionPT: String, strDescriptionSE: String, strDescriptionNL: String, strDescriptionHU: String, strDescriptionNO: String, strDescriptionPL: String, strDescriptionIL: String, strTvRights: String, strFanart1: String, strFanart2: String, strFanart3: String, strFanart4: String, strBanner: String, strBadge: String, strLogo: String, strPoster: String, strTrophy: String, strNaming: String, strComplete: String, strLocked: String) {
         self.idLeague = idLeague
         self.idSoccerXML = idSoccerXML

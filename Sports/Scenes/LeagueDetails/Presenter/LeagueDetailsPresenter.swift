@@ -18,6 +18,7 @@ protocol LeagueDetailsViewProtocol:class{
     func showIndicator()
     func hideIndicator()
     func updateView()
+    func displayFavouriteImage(isFavourite: Bool)
 }
 
 
@@ -54,6 +55,10 @@ class LeagueDetailsPresenter{
     
     
 //MARK:Viewdidload
+
+    private var interactorCD: CoreDataManager?
+    
+
     func viewdidload(){
         Event.latestEventCount = 0
         Event.upcomingEventCount = 0
@@ -63,6 +68,29 @@ class LeagueDetailsPresenter{
     
 //MARK:Events Section........................
     
+
+        
+    }
+    init(view:LeagueDetailsViewProtocol, appDelegate: AppDelegate) {
+        self.view = view
+        self.interactorCD = CoreDataManager(appDelegate: appDelegate)
+    }
+    
+    func addToFavourite(idLeague: String, country: Country) {
+        let isExist = interactorCD!.isLeagueExist(idLeague: idLeague)
+        if isExist {
+            interactorCD!.deleteRow(idLeague: idLeague)
+        } else {
+            interactorCD!.insertRow(country: country)
+        }
+        changeIconFavourite(idLeague: idLeague)
+    }
+    
+    func changeIconFavourite(idLeague: String) {
+        let isExist = interactorCD!.isLeagueExist(idLeague: idLeague)
+        view!.displayFavouriteImage(isFavourite: isExist)
+    }
+
     
     
     //MARK:--GetEventsData

@@ -32,6 +32,11 @@ extension LeagueViewController {
         rfreshControl.endRefreshing()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        presenter.viewDidLoad()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
