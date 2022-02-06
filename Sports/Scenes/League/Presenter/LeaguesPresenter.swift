@@ -52,8 +52,8 @@ class LeaguesPresenter {
                 guard let leagueResult = response else { return }
                 self?.countrys = leagueResult.countrys
                 self?.view?.fetchingDataSuccess()
-            case .failure(let error):
-                self?.view?.showError(error: error.userInfo.description)
+            case .failure:
+                self?.view?.showError(error: "No Data Found!")
             }
         }
     }

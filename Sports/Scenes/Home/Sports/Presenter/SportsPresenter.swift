@@ -53,8 +53,8 @@ class SportsPresenter {
                 guard let sportResult = response else { return }
                 self?.sports = sportResult.sports
                 self?.view?.fetchingDataSuccess()
-            case .failure(let error):
-                self?.view?.showError(error: error.userInfo.description)
+            case .failure:
+                self?.view?.showError(error: "No Data Found!")
             }
         }
     }
