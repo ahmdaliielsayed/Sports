@@ -15,6 +15,7 @@ struct APIConstants {
     static let GET_ALL_SPORTS = "/all_sports.php"
     static let GET_ALL_LEAGUES = "/search_all_leagues.php"
     static let GET_LEAGUE = "/eventsseason.php"
+    static let GET_TEAMS = "/search_all_teams.php"
     
     
     static let SUCCESS_RESPONSE = 200

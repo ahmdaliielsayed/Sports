@@ -28,7 +28,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Barcelona-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="1QZ-gN-afZ">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no image" translatesAutoresizingMaskIntoConstraints="NO" id="1QZ-gN-afZ">
                         <rect key="frame" x="0.0" y="0.0" width="184" height="98"/>
                     </imageView>
                 </subviews>
@@ -49,11 +49,13 @@
             <size key="customSize" width="34" height="115"/>
             <connections>
                 <outlet property="cellSuperView" destination="fG1-0c-GC1" id="UbS-2f-lW5"/>
+                <outlet property="teamImg" destination="1QZ-gN-afZ" id="NAr-bZ-3uI"/>
+                <outlet property="teamName" destination="wf1-a7-aLL" id="tzZ-MX-vKV"/>
             </connections>
             <point key="canvasLocation" x="120.28985507246378" y="173.77232142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Barcelona-Logo" width="3840" height="2160"/>
+        <image name="no image" width="48" height="48"/>
     </resources>
 </document>

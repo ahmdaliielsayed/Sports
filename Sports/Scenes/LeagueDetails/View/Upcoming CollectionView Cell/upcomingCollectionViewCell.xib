@@ -19,25 +19,25 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfT-uU-Xw1">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lions-indomptables-cameroun-logo-F231C99DDA-seeklogo.com" translatesAutoresizingMaskIntoConstraints="NO" id="Eu2-22-cbm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no image" translatesAutoresizingMaskIntoConstraints="NO" id="Eu2-22-cbm">
                                 <rect key="frame" x="201" y="45" width="89" height="86"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egypt-national-football-team-wikipedia-egypt-national-team-logo-clock-digital-clock-gauge-transparent-png-2680995" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-Ai-JQJ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no image" translatesAutoresizingMaskIntoConstraints="NO" id="xVa-Ai-JQJ">
                                 <rect key="frame" x="11" y="45" width="89" height="86"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egypt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="SOt-kN-vJO">
-                                <rect key="frame" x="27" y="139" width="46" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egypt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="SOt-kN-vJO">
+                                <rect key="frame" x="32.5" y="139" width="35.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cameroon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="gwc-FG-aiN">
-                                <rect key="frame" x="204.5" y="139" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cameroon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="gwc-FG-aiN">
+                                <rect key="frame" x="214.5" y="139" width="62" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu 3 Feb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-8p-egw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thu 3 Feb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="6fl-8p-egw">
                                 <rect key="frame" x="109.5" y="64" width="81" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -86,12 +86,12 @@
                 <outlet property="firstTeamimg" destination="xVa-Ai-JQJ" id="cDZ-4m-pH4"/>
                 <outlet property="secondTeamImg" destination="Eu2-22-cbm" id="hmc-Lc-V1v"/>
                 <outlet property="secondTeamLB" destination="gwc-FG-aiN" id="KD0-O8-kXf"/>
+                <outlet property="upcomingDate" destination="6fl-8p-egw" id="G8u-kb-4jV"/>
             </connections>
             <point key="canvasLocation" x="-8" y="125"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="egypt-national-football-team-wikipedia-egypt-national-team-logo-clock-digital-clock-gauge-transparent-png-2680995" width="1000" height="1000"/>
-        <image name="lions-indomptables-cameroun-logo-F231C99DDA-seeklogo.com" width="300" height="300"/>
+        <image name="no image" width="48" height="48"/>
     </resources>
 </document>

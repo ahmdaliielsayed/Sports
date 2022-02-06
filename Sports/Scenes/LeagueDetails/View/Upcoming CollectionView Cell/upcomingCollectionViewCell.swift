@@ -16,6 +16,7 @@ class upcomingCollectionViewCell: UICollectionViewCell,upcomingEventCellViewProt
   
     @IBOutlet weak var cellView: UIView!
     
+    @IBOutlet weak var upcomingDate: UILabel!
     @IBOutlet weak var secondTeamImg: UIImageView!
     
     override func awakeFromNib() {
@@ -34,9 +35,9 @@ class upcomingCollectionViewCell: UICollectionViewCell,upcomingEventCellViewProt
     func updateTeamsName(firstTeam: String, secondTeam: String) {
            firstTeamLB.text = firstTeam
            secondTeamLB.text = secondTeam
-     }
+    }
     func getDate(date: String) {
-        
+        upcomingDate.text = date
     }
        
 

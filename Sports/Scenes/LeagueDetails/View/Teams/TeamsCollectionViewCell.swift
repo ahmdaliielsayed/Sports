@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
-class TeamsCollectionViewCell: UICollectionViewCell {
+protocol GetTeamDataProtocol {
+    func getTeam(name:String,img:String)
+}
 
-    
+class TeamsCollectionViewCell: UICollectionViewCell,GetTeamDataProtocol {
+       
+    @IBOutlet weak var teamImg: UIImageView!
+    @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var cellSuperView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,10 +25,14 @@ class TeamsCollectionViewCell: UICollectionViewCell {
         cellSuperView.layer.masksToBounds = true
     }
     
-    
     static func nib() -> UINib
     {
         return UINib(nibName: "TeamsCollectionViewCell", bundle: nil)
     }
-
+    
+    func getTeam(name: String, img: String) {
+        teamName?.text = name
+        teamImg.kf.indicatorType = .activity
+        teamImg.kf.setImage(with: URL(string: img), placeholder: nil, options: [.transition(.fade(0.7))], progressBlock: nil)
+    }
 }
