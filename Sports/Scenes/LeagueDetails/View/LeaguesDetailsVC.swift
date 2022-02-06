@@ -11,9 +11,12 @@ import UIKit
 class LeaguesDetailsVC: UIViewController {
     
     var country: Country?
-    var countryModel: CountryModel?
     let indicator = UIActivityIndicatorView(style: .large)
     var presenter : LeagueDetailsPresenter?
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var newCountry:Country = Country()
+    
     //MARK:-Outlet section
     
     
@@ -23,26 +26,23 @@ class LeaguesDetailsVC: UIViewController {
    
     @IBOutlet weak var teamsCollectionView: UICollectionView!
     
-    
-    
+    @IBOutlet weak var btnFavOutlet: UIButton!
     
     //MARK:-
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = LeagueDetailsPresenter(view: self)
+        presenter = LeagueDetailsPresenter(view: self, appDelegate: appDelegate)
         presenter?.viewdidload()
         setupCollectionView()
         addingSwipe()
 
         // Do any additional setup after loading the view.
-        if country == nil {
-            print(countryModel!.idLeague!)
-        } else {
-            print(country!.idLeague!)
-        }
+        presenter?.changeIconFavourite(idLeague: country!.idLeague!)
     }
     
-
+    @IBAction func btnFavourite(_ sender: UIButton) {
+        presenter?.addToFavourite(idLeague: country!.idLeague!, country: country!)
+    }
 }
 
 
@@ -60,5 +60,4 @@ extension LeaguesDetailsVC {
     {
         dismiss(animated: true, completion: nil)
     }
-    
 }
