@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProtocol{
-     
- 
+    
     @IBOutlet weak var cellSuperView: UIView!
     @IBOutlet weak var firstTeamImg: UIImageView!
     @IBOutlet weak var secondTeamImg: UIImageView!
@@ -25,12 +25,8 @@ class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProt
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        view.layer.cornerRadius = 5;
-//        view.layer.masksToBounds = true;
         cellSuperView.layer.cornerRadius = 20
         cellSuperView.layer.masksToBounds = true
-//        firstTeamImg.roundImg()
-//        secondTeamImg.roundImg()
     }
     
     static func nib()->UINib{
@@ -44,6 +40,15 @@ class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProt
    func updateResult(result: String) {
         scoreLB.text = result
    }
+    
+    func updateFirstTeamImgs(firstTeamimg: String) {
+        firstTeamImg.kf.setImage(with: URL(string: firstTeamimg), placeholder: UIImage(named: "no image"), options: [.transition(.fade(0.3))], progressBlock: nil)
+            
+    }
+    
+    func updateSecondTeamImgs(secondTeamimg: String) {
+        secondTeamImg.kf.setImage(with: URL(string:secondTeamimg), placeholder: UIImage(named: "no image"), options: [.transition(.fade(0.3))], progressBlock: nil)
+    }
 
 
 }

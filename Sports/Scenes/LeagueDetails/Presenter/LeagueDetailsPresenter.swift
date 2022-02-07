@@ -7,11 +7,6 @@
 //
 
 import Foundation
-//MARK:NavigatetoTeamDetailsProtocol
-protocol NavigateToTeamDetailsProtocols{
-    func navigateToTeamDetailsVC(team:Team)
-}
-
 //MARK:-LeagueDetailsViewProtocol
 protocol LeagueDetailsViewProtocol:class{
     func getLeagueId()->String
@@ -19,6 +14,8 @@ protocol LeagueDetailsViewProtocol:class{
     func hideIndicator()
     func updateView()
     func displayFavouriteImage(isFavourite: Bool)
+    func getLeagueData()->Country
+    func navigateToTeamDetailsVC(team:Team)
 }
 
 
@@ -27,6 +24,8 @@ protocol LastestEventsCellViewProtocol {
     //func updateImg()
     func updateTeamsName(fisrtTeam : String,secondTeam : String)
     func updateResult(result:String)
+    func updateFirstTeamImgs(firstTeamimg:String)
+    func updateSecondTeamImgs(secondTeamimg:String)
 }
 
 
@@ -47,17 +46,14 @@ class LeagueDetailsPresenter{
     private var latestEvents = [Event]()
     private var teams = [Team]()
     private var leagueName : String?
+    private var interactorCD: CoreDataManager?
+    private var leagueTeams = [Team]()
     
 //MARK:Init
-    init(view:LeagueDetailsViewProtocol) {
+    init(view:LeagueDetailsViewProtocol, appDelegate: AppDelegate) {
         self.view = view
+        self.interactorCD = CoreDataManager(appDelegate: appDelegate)
     }
-    
-    
-//MARK:Viewdidload
-
-    private var interactorCD: CoreDataManager?
-    
 
     func viewdidload(){
         Event.latestEventCount = 0
@@ -70,11 +66,7 @@ class LeagueDetailsPresenter{
     
 
         
-    }
-    init(view:LeagueDetailsViewProtocol, appDelegate: AppDelegate) {
-        self.view = view
-        self.interactorCD = CoreDataManager(appDelegate: appDelegate)
-    }
+       
     
     func addToFavourite(idLeague: String, country: Country) {
         let isExist = interactorCD!.isLeagueExist(idLeague: idLeague)
@@ -129,7 +121,9 @@ class LeagueDetailsPresenter{
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en_US_POSIX")
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            let date = dateFormatter.date(from:newEvent.date ?? "")!
+            guard let date = dateFormatter.date(from:newEvent.date ?? "") else{
+                return
+            }
             let order = Calendar.current.compare(today, to: date,toGranularity: .day)
             switch order {
             case .orderedDescending:
@@ -173,6 +167,16 @@ class LeagueDetailsPresenter{
         let event = latestEvents[index]
         cell.updateTeamsName(fisrtTeam: event.homeTeam ?? "", secondTeam: event.awayTeam ?? "")
         cell.updateResult(result: "\(event.homeTeamScore ?? "") : \(event.awayTeamScore ?? "")")
+        for team in teams{
+            if event.homeTeamId == team.teamid {
+                cell.updateFirstTeamImgs(firstTeamimg: team.teamBadge ?? "")
+            }
+            else if event.awayTeamId == team.teamid{
+                cell.updateSecondTeamImgs(secondTeamimg: team.teamBadge ?? "")
+            }
+            
+        }
+        
     }
     
     
@@ -192,12 +196,17 @@ class LeagueDetailsPresenter{
     func getteamsData()
     {
         let indicator = TeamAPI()
-        indicator.getTeamsData(leagueName: leagueName ?? "") { [weak self](result) in
+        indicator.getTeamsData(leagueName: view?.getLeagueData().strLeague ?? "") { [weak self](result) in
             print("fetching teams dataa...............")
             switch result {
             case .success(let response):
                 guard let teamsResult = response else {return}
                 self?.teams = teamsResult.teams ?? []
+                for team in self?.teams ?? []
+                {
+                    print("\(team.teamName)\n\(team.stadiumName)\n")
+                }
+                self?.view?.updateView()
                 print("success.........................")
             case .failure(let error):
                 print(error.localizedDescription)
@@ -213,6 +222,11 @@ class LeagueDetailsPresenter{
     func configureTeamsData(cell:GetTeamDataProtocol,index:Int)
     {
         cell.getTeam(name: teams[index].teamName ?? "", img: teams[index].teamBadge ?? "")
+    }
+//MARK:-did select team
+    func didSelectTeam(index:Int)
+    {
+        view?.navigateToTeamDetailsVC(team: teams[index])
     }
 }
 

@@ -14,7 +14,6 @@ class LeagueViewController: UITableViewController {
     let indicator = UIActivityIndicatorView(style: .large)
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let rfreshControl = UIRefreshControl()
-    
     var sport: Sport?
     
     override func viewDidLoad() {
@@ -22,7 +21,6 @@ class LeagueViewController: UITableViewController {
         setupNavigationController()        
         setupNavigationController()
         setupRefreshControl()
-        
         presenter = LeaguesPresenter(view: self, appDelegate: appDelegate)
         presenter.viewDidLoad()
     }

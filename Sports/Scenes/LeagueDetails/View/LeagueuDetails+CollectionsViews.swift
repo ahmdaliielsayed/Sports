@@ -76,6 +76,12 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == teamsCollectionView{
+            presenter?.didSelectTeam(index: indexPath.row)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         if collectionView == upcomingCollectionView{

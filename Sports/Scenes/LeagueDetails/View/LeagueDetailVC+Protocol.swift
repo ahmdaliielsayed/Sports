@@ -12,7 +12,11 @@ import UIKit
 
 extension LeaguesDetailsVC : LeagueDetailsViewProtocol
 {
-    
+        
+    func getLeagueData() -> Country {
+        return country!
+    }
+      
     func showIndicator() {
         indicator.center = self.view.center
         indicator.color = UIColor.white
@@ -27,7 +31,7 @@ extension LeaguesDetailsVC : LeagueDetailsViewProtocol
     {
         upcomingCollectionView.reloadData()
         leastCollectionView.reloadData()
-        //teamsCollectionView.reloadData()
+        teamsCollectionView.reloadData()
     }
     
     func getLeagueId()->String{
@@ -41,4 +45,12 @@ extension LeaguesDetailsVC : LeagueDetailsViewProtocol
             btnFavOutlet.setImage(UIImage(named: "star"), for: .normal)
         }
     }
+    
+    func navigateToTeamDetailsVC(team: Team) {
+        let teamDetailsVC : TeamDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetailVC") as! TeamDetailVC
+        
+        teamDetailsVC.team = team
+        self.present(teamDetailsVC,animated: true)
+    }
+    
 }
