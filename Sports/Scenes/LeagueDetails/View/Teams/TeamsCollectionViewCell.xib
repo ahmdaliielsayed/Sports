@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="10" width="184" height="92"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.19215686274509802" green="0.31372549019607843" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1QZ-gN-afZ" firstAttribute="leading" secondItem="fG1-0c-GC1" secondAttribute="leading" id="IdZ-KI-g06"/>
                             <constraint firstItem="1QZ-gN-afZ" firstAttribute="top" secondItem="fG1-0c-GC1" secondAttribute="top" constant="10" id="JyJ-F6-1m9"/>

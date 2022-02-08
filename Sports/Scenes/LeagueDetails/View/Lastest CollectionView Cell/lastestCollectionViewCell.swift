@@ -42,12 +42,12 @@ class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProt
    }
     
     func updateFirstTeamImgs(firstTeamimg: String) {
-        firstTeamImg.kf.setImage(with: URL(string: firstTeamimg), placeholder: UIImage(named: "no image"), options: [.transition(.fade(0.3))], progressBlock: nil)
+        firstTeamImg.kf.setImage(with: URL(string: firstTeamimg), placeholder: UIImage(named: "no image"), options: nil, progressBlock: nil)
             
     }
     
     func updateSecondTeamImgs(secondTeamimg: String) {
-        secondTeamImg.kf.setImage(with: URL(string:secondTeamimg), placeholder: UIImage(named: "no image"), options: [.transition(.fade(0.3))], progressBlock: nil)
+        secondTeamImg.kf.setImage(with: URL(string:secondTeamimg), placeholder: UIImage(named: "no image"), options: nil, progressBlock: nil)
     }
 
 

@@ -33,6 +33,8 @@ protocol LastestEventsCellViewProtocol {
 protocol upcomingEventCellViewProtocol {
     func updateTeamsName(firstTeam : String,secondTeam : String)
     func getDate(date:String)
+    func updateFirstTeamImgs(firstTeamimg:String)
+    func updateSecondTeamImgs(secondTeamimg:String)
 }
 
 
@@ -100,7 +102,7 @@ class LeagueDetailsPresenter{
                 self?.leagueName = eventResult.events?[0].leagueName
                 for res in eventResult.events ?? [] {
                     self?.addEvent(newEvent:res)
-                    print("\(String(describing: res.EvnetTitle))\n\(String(describing: res.leagueName))\n\(String(describing: res.homeTeam))\n\(String(describing: res.homeTeamId))\n\(String(describing: res.awayTeam))\n\(String(describing: res.awayTeamId))\n\(String(describing:   res.homeTeamScore))\n\(String(describing: res.awayTeamScore))\n\(String(describing: res.isFinished))\n\(String(describing: res.date))\n")
+                    print("\(String(describing: res.EvnetTitle))\n\(String(describing: res.leagueName))\n\(String(describing: res.homeTeam))\n\(String(describing: res.homeTeamId))\n\(String(describing: res.awayTeam))\n\(String(describing: res.awayTeamId))\n\(String(describing:   res.homeTeamScore))\n\(String(describing: res.awayTeamScore))\n\(String(describing: res.isFinished))\n\(String(describing: res.date))\n\(String(describing:res.dateEvent))")
                 }
                 self?.view?.updateView()
                 print("success......")
@@ -116,15 +118,13 @@ class LeagueDetailsPresenter{
     */
     func addEvent(newEvent:Event)
     {
+
         if newEvent.date != nil{
             let today = Date()
             let dateFormatter = DateFormatter()
-            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            guard let date = dateFormatter.date(from:newEvent.date ?? "") else{
-                return
-            }
-            let order = Calendar.current.compare(today, to: date,toGranularity: .day)
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            guard let eventdate = dateFormatter.date(from: newEvent.dateEvent ?? "")else{return}
+            let order = Calendar.current.compare(today, to: eventdate,toGranularity: .day)
             switch order {
             case .orderedDescending:
                 Event.latestEventCount! += 1
@@ -140,9 +140,6 @@ class LeagueDetailsPresenter{
                 upcomingEvents.append(newEvent)
                 newEvent.isFinished = false
             }
-        }
-        else{
-            
         }
     }
 
@@ -187,6 +184,15 @@ class LeagueDetailsPresenter{
         let event = upcomingEvents[index]
         cell.updateTeamsName(firstTeam: event.homeTeam ?? "", secondTeam: event.awayTeam ?? "")
         cell.getDate(date: "\(String(describing: upcomingEvents[index].dateEvent ?? ""))")
+        for team in teams{
+            if event.homeTeamId == team.teamid {
+                cell.updateFirstTeamImgs(firstTeamimg: team.teamBadge ?? "")
+            }
+            else if event.awayTeamId == team.teamid{
+                cell.updateSecondTeamImgs(secondTeamimg: team.teamBadge ?? "")
+            }
+            
+        }
     }
 //MARK:Teams Section........................
     

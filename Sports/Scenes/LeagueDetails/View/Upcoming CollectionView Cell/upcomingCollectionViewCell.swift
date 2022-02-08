@@ -9,6 +9,8 @@
 import UIKit
 
 class upcomingCollectionViewCell: UICollectionViewCell,upcomingEventCellViewProtocol{
+    
+    
         
     @IBOutlet weak var secondTeamLB: UILabel!
     @IBOutlet weak var firstTeamLB: UILabel!
@@ -39,7 +41,13 @@ class upcomingCollectionViewCell: UICollectionViewCell,upcomingEventCellViewProt
     func getDate(date: String) {
         upcomingDate.text = date
     }
-       
+   func updateFirstTeamImgs(firstTeamimg: String) {
+    self.firstTeamimg.kf.setImage(with: URL(string: firstTeamimg), placeholder: nil, options: nil, progressBlock: nil)
+   }
+   
+   func updateSecondTeamImgs(secondTeamimg: String) {
+    self.secondTeamImg.kf.setImage(with: URL(string: secondTeamimg), placeholder: nil, options: nil, progressBlock: nil)
+   }
 
     
 

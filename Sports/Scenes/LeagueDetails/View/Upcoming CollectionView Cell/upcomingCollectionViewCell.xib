@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.19215686274509802" green="0.31372549019607843" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xVa-Ai-JQJ" firstAttribute="width" secondItem="yfT-uU-Xw1" secondAttribute="width" multiplier="0.296667" id="3bw-8D-X9V"/>
                             <constraint firstItem="SOt-kN-vJO" firstAttribute="centerX" secondItem="xVa-Ai-JQJ" secondAttribute="centerX" constant="-5.5" id="530-8v-di3"/>
@@ -88,7 +88,7 @@
                 <outlet property="secondTeamLB" destination="gwc-FG-aiN" id="KD0-O8-kXf"/>
                 <outlet property="upcomingDate" destination="6fl-8p-egw" id="G8u-kb-4jV"/>
             </connections>
-            <point key="canvasLocation" x="-8" y="125"/>
+            <point key="canvasLocation" x="-8" y="124.13793103448276"/>
         </collectionViewCell>
     </objects>
     <resources>

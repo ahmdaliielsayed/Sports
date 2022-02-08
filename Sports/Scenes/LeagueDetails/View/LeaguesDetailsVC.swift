@@ -19,6 +19,9 @@ class LeaguesDetailsVC: UIViewController {
     
     //MARK:-Outlet section
     
+  
+    @IBOutlet weak var nolatestData: UIImageView!
+    @IBOutlet weak var noUpcomingData: UIImageView!
     
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     
@@ -40,6 +43,9 @@ class LeaguesDetailsVC: UIViewController {
         presenter?.changeIconFavourite(idLeague: country!.idLeague!)
     }
     
+    @IBAction func didBackbtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func btnFavourite(_ sender: UIButton) {
         presenter?.addToFavourite(idLeague: country!.idLeague!, country: country!)
     }

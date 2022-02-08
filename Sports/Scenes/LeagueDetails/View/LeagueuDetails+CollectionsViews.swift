@@ -44,10 +44,19 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == upcomingCollectionView{
-            return presenter?.getupComingCount() ?? 0
+            let eventCount = presenter?.getupComingCount() ?? 0
+            if eventCount == 0 { noUpcomingData.isHidden = false
+                noUpcomingData.layer.cornerRadius = 20
+                noUpcomingData.layer.masksToBounds = true
+            }
+            else { noUpcomingData.isHidden = true}
+            return eventCount
         }
         else if collectionView == leastCollectionView{
-            return presenter?.getlatestCount() ?? 0
+            let eventCount = presenter?.getlatestCount() ?? 0
+            if eventCount == 0 { nolatestData.isHidden = false}
+            else { nolatestData.isHidden = true}
+            return eventCount
         }
         else{
             return presenter?.getTeamsCount() ?? 0
