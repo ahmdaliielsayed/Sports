@@ -20,36 +20,36 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteLeagueTVCell" rowHeight="100" id="hxa-yW-nP1" customClass="FavouriteLeagueTVCell" customModule="Sports" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavouriteLeagueTVCell" rowHeight="112" id="hxa-yW-nP1" customClass="FavouriteLeagueTVCell" customModule="Sports" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="112"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hxa-yW-nP1" id="Zua-9f-d8V">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-ft-lUl">
-                                                    <rect key="frame" x="20" y="11" width="374" height="78"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown" translatesAutoresizingMaskIntoConstraints="NO" id="w1W-jp-4J8">
-                                                            <rect key="frame" x="8" y="8" width="60" height="62"/>
+                                                            <rect key="frame" x="16" y="8" width="74" height="74"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="60" id="zFx-4L-qSR"/>
+                                                                <constraint firstAttribute="width" constant="74" id="zFx-4L-qSR"/>
                                                             </constraints>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="815-lk-aa5">
-                                                            <rect key="frame" x="322" y="23" width="32" height="32"/>
+                                                            <rect key="frame" x="314" y="25" width="40" height="40"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="V4Q-kM-WIl"/>
-                                                                <constraint firstAttribute="width" constant="32" id="c4G-3I-vTx"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="eiH-hY-E19"/>
+                                                                <constraint firstAttribute="height" constant="40" id="V4Q-kM-WIl"/>
+                                                                <constraint firstAttribute="width" constant="40" id="c4G-3I-vTx"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="eiH-hY-E19"/>
                                                             </constraints>
-                                                            <state key="normal" image="youtube"/>
+                                                            <state key="normal" image="Team Youtube"/>
                                                             <connections>
                                                                 <action selector="btnYoutube:" destination="hxa-yW-nP1" eventType="touchUpInside" id="LYd-Qk-fqn"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qij-wK-PhY">
-                                                            <rect key="frame" x="76" y="8" width="238" height="62"/>
+                                                            <rect key="frame" x="98" y="8" width="208" height="74"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                                         <constraint firstItem="qij-wK-PhY" firstAttribute="bottom" secondItem="w1W-jp-4J8" secondAttribute="bottom" id="NMs-26-jic"/>
                                                         <constraint firstItem="qij-wK-PhY" firstAttribute="top" secondItem="w1W-jp-4J8" secondAttribute="top" id="OjV-bU-Gh9"/>
                                                         <constraint firstItem="815-lk-aa5" firstAttribute="leading" secondItem="qij-wK-PhY" secondAttribute="trailing" constant="8" id="PuT-bK-OMl"/>
-                                                        <constraint firstItem="w1W-jp-4J8" firstAttribute="leading" secondItem="qdS-ft-lUl" secondAttribute="leadingMargin" id="nE7-iu-stR"/>
+                                                        <constraint firstItem="w1W-jp-4J8" firstAttribute="leading" secondItem="qdS-ft-lUl" secondAttribute="leadingMargin" constant="8" id="nE7-iu-stR"/>
                                                         <constraint firstItem="qij-wK-PhY" firstAttribute="leading" secondItem="w1W-jp-4J8" secondAttribute="trailing" constant="8" id="qkw-kY-3hh"/>
                                                     </constraints>
                                                 </view>
@@ -199,47 +199,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueTVCell" rowHeight="100" id="o0D-tv-dr5" customClass="LeagueTVCell" customModule="Sports" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeagueTVCell" rowHeight="112" id="o0D-tv-dr5" customClass="LeagueTVCell" customModule="Sports" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o0D-tv-dr5" id="L40-Vz-Uhz">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-pq-O9c">
-                                            <rect key="frame" x="20" y="11" width="374" height="78"/>
+                                            <rect key="frame" x="20" y="11" width="374" height="90"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown" translatesAutoresizingMaskIntoConstraints="NO" id="J57-2x-KBG">
-                                                    <rect key="frame" x="20" y="9" width="60" height="60"/>
+                                                    <rect key="frame" x="20" y="7.5" width="75" height="75"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="WhJ-Qr-nvz"/>
-                                                        <constraint firstAttribute="width" constant="60" id="b16-Ts-ALu"/>
+                                                        <constraint firstAttribute="height" constant="75" id="WhJ-Qr-nvz"/>
+                                                        <constraint firstAttribute="width" constant="75" id="b16-Ts-ALu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-wF-unA">
-                                                    <rect key="frame" x="322" y="23" width="32" height="32"/>
+                                                    <rect key="frame" x="314" y="25" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="HmI-v1-rPe"/>
-                                                        <constraint firstAttribute="width" constant="32" id="U5f-eb-S18"/>
+                                                        <constraint firstAttribute="height" constant="40" id="HmI-v1-rPe"/>
+                                                        <constraint firstAttribute="width" constant="40" id="U5f-eb-S18"/>
                                                     </constraints>
-                                                    <state key="normal" image="youtube"/>
+                                                    <state key="normal" image="Team Youtube"/>
                                                     <connections>
                                                         <action selector="btnYoutube:" destination="o0D-tv-dr5" eventType="touchUpInside" id="Vvx-Wx-Ovs"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wB-cx-mj7">
-                                                    <rect key="frame" x="266" y="23" width="32" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="8hq-GJ-fN2"/>
-                                                        <constraint firstAttribute="height" constant="32" id="ebl-2E-jnT"/>
-                                                    </constraints>
-                                                    <state key="normal" image="unfavourite"/>
-                                                    <connections>
-                                                        <action selector="btnFavourite:" destination="o0D-tv-dr5" eventType="touchUpInside" id="eu8-kd-SP9"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0u-XQ-eoa">
-                                                    <rect key="frame" x="88" y="9" width="170" height="60"/>
+                                                    <rect key="frame" x="103" y="7.5" width="203" height="75"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -251,13 +240,10 @@
                                                 <constraint firstItem="a0u-XQ-eoa" firstAttribute="leading" secondItem="J57-2x-KBG" secondAttribute="trailing" constant="8" id="6yn-jF-t1e"/>
                                                 <constraint firstAttribute="trailing" secondItem="OCB-wF-unA" secondAttribute="trailing" constant="20" symbolic="YES" id="F0v-Yk-ngv"/>
                                                 <constraint firstItem="J57-2x-KBG" firstAttribute="centerY" secondItem="caQ-pq-O9c" secondAttribute="centerY" id="K7V-8b-fUs"/>
-                                                <constraint firstItem="3wB-cx-mj7" firstAttribute="top" secondItem="OCB-wF-unA" secondAttribute="top" id="X6q-HX-jj6"/>
-                                                <constraint firstItem="3wB-cx-mj7" firstAttribute="bottom" secondItem="OCB-wF-unA" secondAttribute="bottom" id="ZDb-y2-gTZ"/>
-                                                <constraint firstItem="3wB-cx-mj7" firstAttribute="leading" secondItem="a0u-XQ-eoa" secondAttribute="trailing" constant="8" id="dBo-53-60z"/>
                                                 <constraint firstItem="a0u-XQ-eoa" firstAttribute="top" secondItem="J57-2x-KBG" secondAttribute="top" id="fu3-im-I0V"/>
                                                 <constraint firstItem="OCB-wF-unA" firstAttribute="centerY" secondItem="caQ-pq-O9c" secondAttribute="centerY" id="hRX-ti-eAz"/>
                                                 <constraint firstItem="a0u-XQ-eoa" firstAttribute="bottom" secondItem="J57-2x-KBG" secondAttribute="bottom" id="iu9-Hg-gO6"/>
-                                                <constraint firstItem="OCB-wF-unA" firstAttribute="leading" secondItem="3wB-cx-mj7" secondAttribute="trailing" constant="24" id="zjD-oZ-lAY"/>
+                                                <constraint firstItem="OCB-wF-unA" firstAttribute="leading" secondItem="a0u-XQ-eoa" secondAttribute="trailing" constant="8" id="ucy-0x-nNc"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -270,7 +256,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0039215686274509803" green="0.17254901960784313" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="btnFavOutlet" destination="3wB-cx-mj7" id="Avs-39-TtJ"/>
                                     <outlet property="containerView" destination="caQ-pq-O9c" id="76F-6R-tHR"/>
                                     <outlet property="ivBadge" destination="J57-2x-KBG" id="oBA-Nd-PK9"/>
                                     <outlet property="lblLeague" destination="a0u-XQ-eoa" id="3vo-8n-0FD"/>
@@ -361,11 +346,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Team Youtube" width="512" height="512"/>
         <image name="arkit" catalog="system" width="64" height="64"/>
         <image name="sports" width="1200" height="675"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
-        <image name="unfavourite" width="512" height="512"/>
         <image name="unknown" width="3667" height="2292"/>
-        <image name="youtube" width="512" height="512"/>
     </resources>
 </document>

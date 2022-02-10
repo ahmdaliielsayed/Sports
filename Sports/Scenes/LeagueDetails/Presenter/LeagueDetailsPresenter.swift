@@ -92,10 +92,9 @@ class LeagueDetailsPresenter{
     func getEventsData()
     {
         let leagueApi:LeagueDetailsAPIProtocol = LeagueDetailsAPI()
-        print("events......")
         view?.showIndicator()
         leagueApi.getLeagueDetails(leagueId: view?.getLeagueId() ?? "") {[weak self](result) in
-         //leagueApi.getLeagueDetails(leagueId: "4905") {[weak self](result) in
+            print("events......\(self!.view?.getLeagueId())")
             self?.view?.hideIndicator()
             switch result {
             case .success(let response):
@@ -103,10 +102,8 @@ class LeagueDetailsPresenter{
                 self?.leagueName = eventResult.events?[0].leagueName
                 for res in eventResult.events ?? [] {
                     self?.addEvent(newEvent:res)
-                    print("\(String(describing: res.EvnetTitle))\n\(String(describing: res.leagueName))\n\(String(describing: res.homeTeam))\n\(String(describing: res.homeTeamId))\n\(String(describing: res.awayTeam))\n\(String(describing: res.awayTeamId))\n\(String(describing:   res.homeTeamScore))\n\(String(describing: res.awayTeamScore))\n\(String(describing: res.isFinished))\n\(String(describing: res.date))\n\(String(describing:res.dateEvent))")
                 }
                 self?.view?.updateView()
-                print("success......")
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -204,17 +201,11 @@ class LeagueDetailsPresenter{
     {
         let indicator = TeamAPI()
         indicator.getTeamsData(leagueName: view?.getLeagueData().strLeague ?? "") { [weak self](result) in
-            print("fetching teams dataa...............")
             switch result {
             case .success(let response):
                 guard let teamsResult = response else {return}
                 self?.teams = teamsResult.teams ?? []
-                for team in self?.teams ?? []
-                {
-                    print("\(team.teamName)\n\(team.stadiumName)\n")
-                }
                 self?.view?.updateView()
-                print("success.........................")
             case .failure(let error):
                 print(error.localizedDescription)
             }

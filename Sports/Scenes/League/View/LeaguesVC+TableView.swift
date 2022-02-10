@@ -55,7 +55,7 @@ extension LeagueViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         //return UIScreen.main.bounds.size.height / 8
-        return 100
+        return 112
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

@@ -78,17 +78,16 @@ class LeaguesPresenter {
             }
         }
         
-        let isExist = interactorCD!.isLeagueExist(idLeague: countrys[index].idLeague!)
-        cell.displayFavouriteImage(isFavourite: isExist)
-        cell.addToFavourite = {
-            if isExist {
-                self.interactorCD!.deleteRow(idLeague: country.idLeague!)
-            } else {
-                self.interactorCD!.insertRow(country: self.countrys[index])
-            }
-            self.view?.fetchingDataSuccess()
-        }
-        
+//        let isExist = interactorCD!.isLeagueExist(idLeague: countrys[index].idLeague!)
+//        cell.displayFavouriteImage(isFavourite: isExist)
+//        cell.addToFavourite = {
+//            if isExist {
+//                self.interactorCD!.deleteRow(idLeague: country.idLeague!)
+//            } else {
+//                self.interactorCD!.insertRow(country: self.countrys[index])
+//            }
+//            self.view?.fetchingDataSuccess()
+//        }
     }
     
     func didSelectRow(index: Int) {

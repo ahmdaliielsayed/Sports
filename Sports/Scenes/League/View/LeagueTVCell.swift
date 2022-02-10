@@ -62,11 +62,11 @@ extension LeagueTVCell: LeagueCellView {
         lblLeague.text = leagueName
     }
     
-    func displayFavouriteImage(isFavourite: Bool) {
-        if isFavourite {
-            btnFavOutlet.setImage(UIImage(named: "favourite"), for: .normal)
-        } else {
-            btnFavOutlet.setImage(UIImage(named: "unfavourite"), for: .normal)
-        }
-    }
+//    func displayFavouriteImage(isFavourite: Bool) {
+//        if isFavourite {
+//            btnFavOutlet.setImage(UIImage(named: "favourite"), for: .normal)
+//        } else {
+//            btnFavOutlet.setImage(UIImage(named: "unfavourite"), for: .normal)
+//        }
+//    }
 }

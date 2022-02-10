@@ -16,7 +16,7 @@ class BaseAPI<T: TargetType> {
         let headers = target.headers
         let params = bulidParams(task: target.task)
         
-        print("\(target.baseURL)\(target.path)\(params.0)")
+        //print("\(target.baseURL)\(target.path)\(params.0)")
         
         Alamofire.request(target.baseURL + target.path, method:method, parameters: params.0, encoding: params.1, headers: headers).responseJSON { (response) in
             guard let statusCode = response.response?.statusCode else {

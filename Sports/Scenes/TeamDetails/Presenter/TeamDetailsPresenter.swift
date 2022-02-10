@@ -21,7 +21,7 @@ class TeamDetailsPresenter{
     }
     
     func openTeamWebstie(link:String) {
-        var website = URL(string: "https://\(link)")!
+        let website = URL(string: "https://\(link)")!
         UIApplication.shared.open(website)
         
     }
