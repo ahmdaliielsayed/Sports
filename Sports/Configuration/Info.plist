@@ -63,6 +63,9 @@
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>youtube</string>
+        <string>instagram</string>
+        <string>fb</string>
+        <string>twitter</string>
 	</array>
 </dict>
 </plist>

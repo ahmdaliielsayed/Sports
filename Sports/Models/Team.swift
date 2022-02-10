@@ -14,6 +14,14 @@ class Team: Codable {
     var teamBadge : String?
     var teamDescription : String?
     var stadiumImg : String?
+    var tShirtImg : String?
+    var teamBanner : String?
+    var teamWebsite : String?
+    var teamFacebook : String?
+    var teamTwitter : String?
+    var teamInstagram : String?
+    var teamLocation : String?
+    var stadiumDate : String?
     
     enum CodingKeys : String, CodingKey {
         case teamid = "idTeam"
@@ -22,5 +30,13 @@ class Team: Codable {
         case teamBadge = "strTeamBadge"
         case teamDescription = "strDescriptionEN"
         case stadiumImg = "strStadiumThumb"
+        case tShirtImg = "strTeamJersey"
+        case teamBanner = "strTeamBanner"
+        case teamWebsite = "strWebsite"
+        case teamFacebook = "strFacebook"
+        case teamTwitter = "strTwitter"
+        case teamInstagram = "strInstagram"
+        case teamLocation = "strStadiumLocation"
+        case stadiumDate = "intFormedYear"
     }
 }

@@ -62,6 +62,7 @@ class LeagueDetailsPresenter{
         Event.upcomingEventCount = 0
         getEventsData()
         getteamsData()
+        
     }
     
 //MARK:Events Section........................
