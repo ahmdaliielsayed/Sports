@@ -12,6 +12,7 @@ class upcomingCollectionViewCell: UICollectionViewCell,upcomingEventCellViewProt
     
     
         
+    @IBOutlet weak var eventTime: UILabel!
     @IBOutlet weak var secondTeamLB: UILabel!
     @IBOutlet weak var firstTeamLB: UILabel!
     @IBOutlet weak var firstTeamimg: UIImageView!
@@ -26,8 +27,6 @@ class upcomingCollectionViewCell: UICollectionViewCell,upcomingEventCellViewProt
         // Initialization code
         cellView.layer.cornerRadius = 20
         cellView.layer.masksToBounds = true
-        firstTeamimg.roundImg()
-        secondTeamImg.roundImg()
         
     }
     
@@ -38,8 +37,9 @@ class upcomingCollectionViewCell: UICollectionViewCell,upcomingEventCellViewProt
            firstTeamLB.text = firstTeam
            secondTeamLB.text = secondTeam
     }
-    func getDate(date: String) {
+    func getDate(date: String,time:String) {
         upcomingDate.text = date
+        eventTime.text=time
     }
    func updateFirstTeamImgs(firstTeamimg: String) {
     self.firstTeamimg.kf.setImage(with: URL(string: firstTeamimg), placeholder: nil, options: nil, progressBlock: nil)

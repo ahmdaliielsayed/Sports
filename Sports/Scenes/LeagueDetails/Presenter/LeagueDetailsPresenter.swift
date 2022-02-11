@@ -26,13 +26,14 @@ protocol LastestEventsCellViewProtocol {
     func updateResult(result:String)
     func updateFirstTeamImgs(firstTeamimg:String)
     func updateSecondTeamImgs(secondTeamimg:String)
+    func updateDate(date:String,time:String)
 }
 
 
 //MARK:-upcomingEventCellViewProtocol
 protocol upcomingEventCellViewProtocol {
     func updateTeamsName(firstTeam : String,secondTeam : String)
-    func getDate(date:String)
+    func getDate(date:String,time:String)
     func updateFirstTeamImgs(firstTeamimg:String)
     func updateSecondTeamImgs(secondTeamimg:String)
 }
@@ -162,6 +163,18 @@ class LeagueDetailsPresenter{
         let event = latestEvents[index]
         cell.updateTeamsName(fisrtTeam: event.homeTeam ?? "", secondTeam: event.awayTeam ?? "")
         cell.updateResult(result: "\(event.homeTeamScore ?? "") : \(event.awayTeamScore ?? "")")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy-MM-dd"
+        guard let date = formatter.date(from: latestEvents[index].dateEvent ?? "") else {
+            return
+        }
+        let components = date.get(.day, .month, .year)
+        if let day = components.day, let month = components.month, let year = components.year {
+            let dayOfWeek = date.dayOfWeek() ?? ""
+            let monthOfDate = date.monthOfDate() ?? ""
+            let eventTime = "\((event.time ?? "").prefix(5))"
+            cell.updateDate(date: "\(dayOfWeek) \(day) \(monthOfDate)",time: eventTime)
+        }
         for team in teams{
             if event.homeTeamId == team.teamid {
                 cell.updateFirstTeamImgs(firstTeamimg: team.teamBadge ?? "")
@@ -181,7 +194,20 @@ class LeagueDetailsPresenter{
     {
         let event = upcomingEvents[index]
         cell.updateTeamsName(firstTeam: event.homeTeam ?? "", secondTeam: event.awayTeam ?? "")
-        cell.getDate(date: "\(String(describing: upcomingEvents[index].dateEvent ?? ""))")
+        //cell.getDate(date: "\(String(describing: upcomingEvents[index].dateEvent ?? ""))")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy-MM-dd"
+        guard let date = formatter.date(from: upcomingEvents[index].dateEvent ?? "") else {
+            return
+        }
+        let components = date.get(.day, .month, .year)
+        if let day = components.day, let month = components.month, let year = components.year {
+            let dayOfWeek = date.dayOfWeek() ?? ""
+            let monthOfDate = date.monthOfDate() ?? ""
+            let eventTime = "\((event.time ?? "").prefix(5))"
+            cell.getDate(date: "\(dayOfWeek) \(day) \(monthOfDate)", time: eventTime)
+        }
+        //............
         for team in teams{
             if event.homeTeamId == team.teamid {
                 cell.updateFirstTeamImgs(firstTeamimg: team.teamBadge ?? "")
@@ -189,8 +215,8 @@ class LeagueDetailsPresenter{
             else if event.awayTeamId == team.teamid{
                 cell.updateSecondTeamImgs(secondTeamimg: team.teamBadge ?? "")
             }
-            
         }
+        
     }
 //MARK:Teams Section........................
     

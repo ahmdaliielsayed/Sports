@@ -59,6 +59,9 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
             return eventCount
         }
         else{
+            let teamCount = presenter?.getTeamsCount() ?? 0
+            if teamCount ==  0 { noTeamImg.isHidden = false}
+            else{ noTeamImg.isHidden = true}
             return presenter?.getTeamsCount() ?? 0
         }
     }
@@ -100,7 +103,8 @@ extension LeaguesDetailsVC : UICollectionViewDelegate,UICollectionViewDataSource
         {
             return CGSize(width:184, height: 135)
         }
-        return CGSize(width:Int(leastCollectionView.frame.width), height: Int(leastCollectionView.frame.height))
+//        return CGSize(width:Int(leastCollectionView.frame.width), height: Int(leastCollectionView.frame.height))
+        return CGSize(width: 300, height: 180)
         
     }
 }

@@ -47,11 +47,7 @@ extension LeaguesDetailsVC : LeagueDetailsViewProtocol
     }
     
     func navigateToTeamDetailsVC(team: Team) {
-//        let teamDetailsVC : TeamDetailVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetailVC") as! TeamDetailVC
-//
-//        teamDetailsVC.team = team
-//        self.present(teamDetailsVC,animated: true)
-        
+
         let teamVC : TeamViewController = self.storyboard?.instantiateViewController(withIdentifier: "TeamViewController") as! TeamViewController
 
         teamVC.team = team

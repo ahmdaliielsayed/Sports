@@ -10,7 +10,9 @@ import UIKit
 import Kingfisher
 
 class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProtocol{
+       
     
+    @IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var cellSuperView: UIView!
     @IBOutlet weak var firstTeamImg: UIImageView!
     @IBOutlet weak var secondTeamImg: UIImageView!
@@ -19,6 +21,7 @@ class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProt
     @IBOutlet weak var scoreLB: UILabel!
     @IBOutlet weak var TimeLB: UILabel!
     
+    @IBOutlet weak var eventTime: UILabel!
     
     public static let reusableCellIdentifierCell = "lastestCollectionViewCell"
     
@@ -49,6 +52,8 @@ class lastestCollectionViewCell: UICollectionViewCell, LastestEventsCellViewProt
     func updateSecondTeamImgs(secondTeamimg: String) {
         secondTeamImg.kf.setImage(with: URL(string:secondTeamimg), placeholder: UIImage(named: "no image"), options: nil, progressBlock: nil)
     }
-
-
+    func updateDate(date: String,time:String) {
+        eventDate.text = date
+        eventTime.text = time
+    }
 }

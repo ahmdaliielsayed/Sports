@@ -21,8 +21,7 @@ class Event: Codable {
     static var latestEventCount : Int?
     var isFinished:Bool?
     var dateEvent : String?
-    
-    //var time : String!
+    var time : String?
     enum CodingKeys : String,CodingKey {
         case EvnetTitle = "strEvent"
         case homeTeam = "strHomeTeam"
@@ -34,5 +33,6 @@ class Event: Codable {
         case homeTeamScore = "intHomeScore"
         case awayTeamScore = "intAwayScore"
         case dateEvent = "dateEvent"
+        case time = "strTime"
     }
 }

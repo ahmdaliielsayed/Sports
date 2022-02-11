@@ -20,6 +20,7 @@ class LeaguesDetailsVC: UIViewController {
     //MARK:-Outlet section
     
   
+    @IBOutlet weak var noTeamImg: UIImageView!
     @IBOutlet weak var nolatestData: UIImageView!
     @IBOutlet weak var noUpcomingData: UIImageView!
     
@@ -60,6 +61,7 @@ extension LeaguesDetailsVC {
              #selector(swipeFunc(gesture:)))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
+        
         
     }
     @objc func swipeFunc(gesture : UISwipeGestureRecognizer)

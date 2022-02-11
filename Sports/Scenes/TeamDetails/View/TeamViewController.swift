@@ -21,6 +21,7 @@ class TeamViewController: UIViewController,TeamViewProtocol{
     @IBOutlet weak var stadiumLocationLB: UILabel!
     @IBOutlet weak var stadiumDateLB: UILabel!
     
+    
     @IBOutlet weak var teamStadiumImg: UIImageView!
     @IBOutlet weak var teamLogoImg: UIImageView!
     @IBOutlet weak var teamBannerImg: UIImageView!
@@ -31,7 +32,6 @@ class TeamViewController: UIViewController,TeamViewProtocol{
         super.viewDidLoad()
         setupScreen()
         presenter = TeamDetailsPresenter(view: self)
-        // Do any additional setup after loading the view.
     }
     
     func setupScreen(){
@@ -40,16 +40,28 @@ class TeamViewController: UIViewController,TeamViewProtocol{
         stadiumView.layer.masksToBounds = true
         teamStadiumImg.layer.cornerRadius=21
         teamStadiumImg.layer.masksToBounds = true
+        if team?.stadiumName == ""{
+            stadiumView.isHidden  = true
+        }
+    
+        
+        
         teamNameLb.text = team?.teamName
         stadiumLB.text = team?.stadiumName
         stadiumLocationLB.text = team?.teamLocation
         stadiumDateLB.text = team?.stadiumDate
         stadiumLocationLB.text = team?.teamLocation
-        teamStadiumImg.kf.setImage(with: URL(string: team?.stadiumImg ?? ""), placeholder: nil, options: nil, progressBlock: nil)
-        teamBannerImg.kf.setImage(with: URL(string: team?.teamBanner ?? ""), placeholder: nil, options: nil, progressBlock: nil)
-        teamLogoImg.kf.setImage(with: URL(string: team?.teamBadge ?? ""), placeholder: nil, options: nil, progressBlock: nil)
-        teamTShirtImg.kf.setImage(with: URL(string: team?.tShirtImg ?? ""), placeholder: nil, options: nil, progressBlock: nil)         
+        teamCountryLB.text = team?.teamCountry
+        teamStadiumImg.kf.setImage(with: URL(string: team?.stadiumImg ?? ""), placeholder: UIImage(named: "no data"), options: nil, progressBlock: nil)
+        teamBannerImg.kf.setImage(with: URL(string: team?.teamBanner ?? ""), placeholder:UIImage(named: "sorry no data"), options: nil, progressBlock: nil)
+        teamLogoImg.kf.setImage(with: URL(string: team?.teamBadge ?? ""), placeholder: UIImage(named: "no data"), options: nil, progressBlock: nil)
+        teamTShirtImg.kf.setImage(with: URL(string: team?.tShirtImg ?? ""), placeholder: UIImage(named: "no data"), options: nil, progressBlock: nil)
+        if team?.teamDescription == "" {
+            teamInfoText.text = "Sorry no Details found........."
+        }
+        else{
          teamInfoText.text = team?.teamDescription
+        }
         
     }
     
@@ -67,6 +79,11 @@ class TeamViewController: UIViewController,TeamViewProtocol{
     
     @IBAction func didTwitterPressed(_ sender: Any) {
          presenter?.openTeamTwitter(link: team?.teamTwitter ?? "")
+    }
+    
+    
+    @IBAction func didYoutubePressed(_ sender: Any) {
+        presenter?.openTeamYouTube(link: team?.teamYoutube ?? "")
     }
     
     @IBAction func didBackBtnPressed(_ sender: Any) {

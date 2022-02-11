@@ -20,6 +20,14 @@ class TeamDetailsPresenter{
         self.view = view
     }
     
+    func openTeamYouTube(link:String){
+        var youtubeURL = URL(string:"youtube://\(link)")!
+        if !UIApplication.shared.canOpenURL(youtubeURL) {
+            youtubeURL = URL(string: "https://\(link)")!
+        }
+        UIApplication.shared.open(youtubeURL)
+    }
+    
     func openTeamWebstie(link:String) {
         let website = URL(string: "https://\(link)")!
         UIApplication.shared.open(website)
