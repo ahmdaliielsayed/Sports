@@ -95,7 +95,6 @@ class LeagueDetailsPresenter{
         let leagueApi:LeagueDetailsAPIProtocol = LeagueDetailsAPI()
         view?.showIndicator()
         leagueApi.getLeagueDetails(leagueId: view?.getLeagueId() ?? "") {[weak self](result) in
-            print("events......\(self!.view?.getLeagueId())")
             self?.view?.hideIndicator()
             switch result {
             case .success(let response):

@@ -14,7 +14,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchSport" translatesAutoresizingMaskIntoConstraints="NO" id="qlG-IS-Zzx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-8e-BIf">
+                                <rect key="frame" x="0.0" y="810" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.046481512490000002" green="0.07254042476" blue="0.12563282249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qlG-IS-Zzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Ha-Wz-3rv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7P3-8e-BIf" secondAttribute="trailing" id="6Z8-zt-Ld0"/>
+                            <constraint firstItem="7P3-8e-BIf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C4n-IG-Xsi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7P3-8e-BIf" secondAttribute="bottom" constant="22" id="WQk-Y4-3dH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qlG-IS-Zzx" secondAttribute="trailing" id="n8r-A6-HeQ"/>
+                            <constraint firstItem="qlG-IS-Zzx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nyh-S1-LNp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qlG-IS-Zzx" secondAttribute="bottom" id="yyD-dl-WZq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -23,4 +43,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchSport" width="564" height="564"/>
+    </resources>
 </document>
